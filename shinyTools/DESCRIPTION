@@ -1,0 +1,9 @@
+Package: shinyTools
+Type: Package
+Title: R shiny modules which I found useful over the past.
+Version: 0.1.0
+Author: Marc Schwering
+Maintainer: Marc Schwering <schweringmarc01@gmail.com>
+Description: A collecction of R shiny modules that I collected over the time while writing some applications.
+License: What license is it under?
+LazyData: TRUE
