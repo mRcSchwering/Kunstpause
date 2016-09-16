@@ -1,45 +1,25 @@
-# This is a small app which embeds the module
 library(shiny)
-library(shinyjs)
+library(shinyTools)
 
-# load module functions
-source("R/FileUpload.R")
+# check functions as example
+check1 <- function(df, add){ if(any(grepl(add$type, df$type))) return(paste("Don't upload", add$type, "files."))}
+check2 <- function(names, add){ if(any(grepl(add$pat, names))) return(paste("Don't use", add$pat, "in a file name."))}
 
-# ui
+# little app with module
 ui <- fluidPage(sidebarLayout(
-
-  sidebarPanel( width = 4,
-        useShinyjs(debug = TRUE),
-        h2("Upload a File"),
-        div(id = "file", FileUploadUI("first", "First File Upload", rename = "rename", multiple = TRUE, horiz = TRUE)),
-        actionButton("toggle", "toggle")
+  sidebarPanel( width = 4, h2("FileUploadUI"),
+        FileUploadUI("uploadID", "Upload File", rename = "Rename File", multiple = TRUE, horiz = TRUE)
   ),
-
-  mainPanel( width = 8,
-        h1("File Upload Modul"),
-        h3("First File Content"),
-        verbatimTextOutput("content1"), br(),
-        h3("Info to Second File(s)"),
-        verbatimTextOutput("content2")
+  mainPanel( width = 8, h2("Return value of FileUpload"),
+        verbatimTextOutput("content1")
   )
-
 ))
 
-source("R/FileUpload.R")
-source("check.R")
-
 server <-function(input, output, session) {
-
-  # use modules (args: module name, id for namespace, ... custom arguments of module)
-  firstFile <- callModule(FileUpload, "first", rename = TRUE, checkFile = "check", checkNames = "check2")
-
-  # some processing (not part of module)
-  output$content1 <- renderPrint(firstFile())
-
-  # toggle stuff
-  observeEvent(input$toggle, toggleState("file"))
-
+  info <- callModule(FileUpload, "uploadID", rename = TRUE, checkNames = "check2", checkFiles = "check1",
+                     addArgs = list(pat = "a", type = "text"))
+  output$content1 <- renderPrint(info())
 }
 
-
 shinyApp(ui, server)
+
