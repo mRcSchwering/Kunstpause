@@ -1,9 +1,28 @@
 library(shiny)
 library(shinyTools)
 
-# check functions as example
-check1 <- function(df, add){ if(any(grepl(add$type, df$type))) return(paste("Don't upload", add$type, "files."))}
-check2 <- function(names, add){ if(any(grepl(add$pat, names))) return(paste("Don't use", add$pat, "in a file name."))}
+# some data
+lines <- c(">ENSG00000139083_0_0.3", "GCCTGCTCAGTGTAGCATTA", ">ENSG00000139083_11_61387.34124",
+  "GGGAACATGAAGTGGCGTCG", ">ENSG00000139083_3_61387.34150", "GTGAGTGTTCGTGACCCGAG", ">ENSG00000139083_9_61387.34118",
+  "GAGGAAGCGTAACTCGGCAC", ">ENSG00000139083_8_61387.34117", "GGGAAGCGTAACTCGGCACT", ">ENSG00000139083_10_61387.34120",
+  "GGCGTCGAGGAAGCGTAACT", ">ENSG00000139083_49_184161.78616")
+pat <- "^(.+?)(_.*)$"
+pat <- "^(.+?)(_.*?)_(.*?)$"
+pat <- "^.*_(.+?)_.*$"
+pat <- "^.*(SG.+?)1.*_(.+?)_.*$"
+
+ncaps <- stringr::str_count(pat, "\\(.+?\\)")
+lines2 <- lines[grepl(pat, lines)]
+
+source("R/GetCaptures.R")
+
+s <- ">ENSG00000139083_8_61387.34117"
+pat <- "^.*((SG.+?)1.*_(.+?))_.*$"
+
+m <- GetCaptures(s, pat)
+apply(m, 2, function(x) substr(s, x[2], x[3]))
+
+
 
 # little app with module
 ui <- fluidPage(sidebarLayout(
