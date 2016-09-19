@@ -43,35 +43,9 @@
 #'
 #' @export
 #'
-FileUploadUI <- function(id, label, help = "Select files for upload.", rename = NULL, multiple = FALSE, horiz = FALSE) {
+CapturePatternUI <- function(id, label) {
   ns <- NS(id)
-
-  # checks
-  if(!is.logical(c(multiple, horiz))) stop("Arguments multiple and horiz need to be logical")
-
-  # file Input
-  inputUI <- tagList(
-    uiOutput(ns("errorMessage_files")),
-    fileInput(ns("file"), label, multiple = multiple)
-  )
-
-  # force reupload every time
-  tags$script(paste0('$( "#', ns("file"), '" ).on( "click", function() { this.value = null; });'))
-
-  # rename UI
-  if(!is.null(rename)){
-    renameUI <- tagList(
-      strong(rename),
-      uiOutput(ns("errorMessage_rename")),
-      uiOutput(ns("rename"))
-    )
-    if(horiz == FALSE) inputUI <- tagList(inputUI, br(), renameUI)
-    if(horiz == TRUE) inputUI <- tagList(fluidRow(column(6, inputUI), column(6, renameUI)))
-  }
-
-  # add help Text
-  if(!is.null(help)) out <- tagList(inputUI, helpText(help))
-
+  out <- tagList(h3(label), br(), uiOutput(ns("captures")))
   return(out)
 }
 
@@ -132,59 +106,28 @@ FileUploadUI <- function(id, label, help = "Select files for upload.", rename = 
 #'
 #' @export
 #'
-FileUpload <- function(input, output, session, rename = FALSE, checkFiles = NULL, checkNames = NULL, addArgs = NULL) {
+CapturePattern <- function(input, output, session, pat, lines, n = 5, cols = NULL) {
 
-  # checks
-  if(class(rename) != "logical") stop("Argument rename must be TRUE or FALSE")
-  if(!is.null(checkFiles) && class(checkFiles) != "character") stop("Argument checkFiles must be a chr or NULL")
-  if(!is.null(checkNames) && class(checkNames) != "character") stop("Argument checkNames must be a chr or NULL")
-  if(!is.null(addArgs) && class(addArgs) != "list") stop("Argument addArgs must be a list or NULL")
+  if(is.null(cols)) cols <- c("#db4437", "#4285f4", "#0f9d58", "#f4b400")
 
-  # error messages
-  error <- reactiveValues(uploaded = NULL, renamed = NULL)
+  output$captures <- renderUI({
+    x <- lines()
+    #pat <- input$regex
 
-  # uploaded files
-  uploaded <- eventReactive(input$file, {
-    df <- input$file
-    if( is.null(df) || is.na(df) || length(df) == 0 || df == "" ){
-      NULL
-    } else if( is.null(checkFiles) ){
-      df
-    } else {
-      error$uploaded <- do.call(checkFiles, args = list(df, addArgs))
-      if(is.null(error$uploaded)) df else NULL
+    if(length(x) < n) return(HTML(paste("<div style='color:red;'>Fewer than", n, "lines detected.</div>")))
+    x <- x[grepl(pat(), x)]
+    if(length(x) < n) return(HTML(paste("<div style='color:red;'>Fewer than", n, "lines match the pattern.</div>")))
+    x <- x[sample(1:length(x), n)]
+    if(length(pat()) < 1 || pat() == "") return(HTML(paste0("<tt>", paste(x, collapse = "<br/>"), "</tt>")))
+
+    txt <- character()
+    for( i in 1:n ){
+      m <- GetCaptures(x[i], pat())
+      m <- apply(rbind(m[1, ], apply(m, 2, function(s) substr(x, s[2], s[3]))), 2, function(ss){
+        if(as.integer(ss[1]) != 0) paste0('<font color="', cols[as.integer(ss[1])], '">', ss[2], "</font>") else ss[2]})
+      txt <- c(txt, paste(m, collapse = ""))
     }
+    HTML(paste0("<tt>", paste( txt, collapse = "<br/>"), "</tt>"))
   })
 
-  # UI for renaming
-  output$rename <- renderUI({
-    if( is.null(uploaded()) || !rename ) return(NULL)
-    df <- uploaded()
-    ns <- session$ns
-    out <- tagList()
-    for(i in 1:nrow(df)) out[[i]] <- textInput(ns(paste0("rename_", i)), df$name[i])
-    out
-  })
-
-  # check file names
-  renamed <- reactive({
-    if( is.null(uploaded())) return(NULL)
-    df <- uploaded()
-    if( !rename ) return(df)
-    genNames <- character(0)
-    for(i in 1:nrow(df)) genNames <- c(genNames, input[[paste0("rename_", i)]])
-    if( nrow(df) != length(genNames) ) return(NULL)
-    if( is.null(checkNames) ){
-      return(cbind(data.frame(genNames = genNames), df))
-    } else {
-      error$renamed <- do.call(checkNames, args = list(genNames, addArgs))
-      if(is.null(error$renamed)) cbind(data.frame(genName = genNames), df) else NULL
-    }
-  })
-
-  # show error messages
-  output$errorMessage_files <- renderUI(HTML(paste0("<div style='color:red'>", error$uploaded, "</div>")))
-  output$errorMessage_rename <- renderUI(HTML(paste0("<div style='color:red'>", error$renamed, "</div>")))
-
-  return(renamed)
 }
