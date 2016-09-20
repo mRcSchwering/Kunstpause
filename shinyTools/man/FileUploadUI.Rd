@@ -28,7 +28,7 @@ chr HTML for creating ui elements.
 This file upload handler provides some functionalities for file uploading and possible renaming of uploaded files.
 }
 \details{
-This is are ui elements of the file upload handler, an error message and some text.
+These are ui elements of the file upload handler, an error message and some text.
 In case rename is not NULL, several text input forms for renaming files are created after file upload.
 }
 \examples{

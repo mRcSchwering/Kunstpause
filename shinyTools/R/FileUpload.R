@@ -2,7 +2,7 @@
 #'
 #' This file upload handler provides some functionalities for file uploading and possible renaming of uploaded files.
 #'
-#' This is are ui elements of the file upload handler, an error message and some text.
+#' These are ui elements of the file upload handler, an error message and some text.
 #' In case rename is not NULL, several text input forms for renaming files are created after file upload.
 #'
 #' @family FileUpload module functions
@@ -65,8 +65,8 @@ FileUploadUI <- function(id, label, help = "Select files for upload.", rename = 
       uiOutput(ns("errorMessage_rename")),
       uiOutput(ns("rename"))
     )
-    if(horiz == FALSE) inputUI <- tagList(inputUI, br(), renameUI)
-    if(horiz == TRUE) inputUI <- tagList(fluidRow(column(6, inputUI), column(6, renameUI)))
+    if(!horiz) inputUI <- tagList(inputUI, br(), renameUI)
+    if(horiz) inputUI <- tagList(fluidRow(column(6, inputUI), column(6, renameUI)))
   }
 
   # add help Text
@@ -86,8 +86,9 @@ FileUploadUI <- function(id, label, help = "Select files for upload.", rename = 
 #' With argument checkFiles a function name can be defined.
 #' This function must take a data.frame as first argument, which will contain information about uploaded files.
 #' It has columns name, datapath, size, type.
-#' The function must return a chr value which will be printed as error message in the ui.
-#' Thereby, the function can be used as quality check with a user feedback.
+#' If the uploaded files should be valid, the function must return NULL.
+#' If they should not be valid a chr string must be returned.
+#' This chr string will be shown in red in the ui as user feedback.
 #'
 #' checkNames works like checkFiles, just that it is a quality check for the user defined names, if rename = TRUE.
 #' It must take a chr vector as first argument which are the names defined by the user.
