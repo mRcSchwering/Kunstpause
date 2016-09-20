@@ -8,6 +8,8 @@
 #'
 #' Nested capturing groups do not work.
 #'
+#' @family CapturePattern module functions
+#'
 #' @param s    chr string
 #' @param pat  chr string containing a regular expression with at least 1 capture '(', ')'
 #'

@@ -2,7 +2,7 @@
 % Please edit documentation in R/CapturePattern.R
 \name{CapturePatternUI}
 \alias{CapturePatternUI}
-\title{FileUploadUI}
+\title{CapturePatternUI}
 \usage{
 CapturePatternUI(id, label)
 }
@@ -10,53 +10,44 @@ CapturePatternUI(id, label)
 \item{id}{chr id of this object for shiny session}
 
 \item{label}{chr or NULL a lable/ title for the file upload}
-
-\item{help}{chr or NULL a help Text}
-
-\item{rename}{chr or NULL (NULL). If not NULL uploaded files can be renamed after upload.
-Value of rename will be used as a label above the renaming ui.}
-
-\item{multiple}{bool (FALSE) whether more than 1 file can be uploaded}
-
-\item{horiz}{bool (FALSE) whether ui elements should be placed horizontally, not vertically}
 }
 \value{
 chr HTML for creating ui elements.
 }
 \description{
-This file upload handler provides some functionalities for file uploading and possible renaming of uploaded files.
+The CapturePattern Module extracts captures from chr strings based on a regular expression and displays them.
 }
 \details{
-This is are ui elements of the file upload handler, an error message and some text.
-In case rename is not NULL, several text input forms for renaming files are created after file upload.
+The UI part is a text output of several lines.
 }
 \examples{
 library(shiny)
 library(shinyTools)
 
-# check functions as example
-check1 <- function(df, add){ if(any(grepl(add$type, df$type))) return(paste("Don't upload", add$type, "files."))}
-check2 <- function(names, add){ if(any(grepl(add$pat, names))) return(paste("Don't use", add$pat, "in a file name."))}
-
+# some generic strings with regular expressions
+regexes <- list("^(.+?)_.*$", "^(.+?)_(.*?)_(.*?)\\\\.(.*)$", "^.*(SG.+?)1.*_(.+?)_.*$")
+lib <- paste0("ENSG00000139", apply(expand.grid(0:9, 0:9, 0:9, "_8_", sample(20000:60000, 5), ".", sample(20000:60000, 5)),
+                                    1, function(x) paste0(x, collapse = "")))
 # little app with module
 ui <- fluidPage(sidebarLayout(
-  sidebarPanel( width = 4, h2("FileUploadUI"),
-                FileUploadUI("uploadID", "Upload File", rename = "Rename File", multiple = TRUE, horiz = TRUE)
+  sidebarPanel( width = 4, h2("Pattern as input"), p("Not part of Module UI"),
+                selectizeInput("regex", "Regex", choices = regexes, options = list(create = TRUE)),
+                helpText("Write your own Regex to try out.")
   ),
-  mainPanel( width = 8, h2("Return value of FileUpload"),
-             verbatimTextOutput("content1")
+  mainPanel( width = 8, h2("CapturePatternUI"),
+             CapturePatternUI("cap", "Patterns Captured")
   )
 ))
+
 server <-function(input, output, session) {
-  info <- callModule(FileUpload, "uploadID", rename = TRUE, checkNames = "check2", checkFiles = "check1",
-                     addArgs = list(pat = "a", type = "text"))
-  output$content1 <- renderPrint(info())
+  callModule(CapturePattern, "cap", pat = reactive(input$regex), lines = reactive(lib))
 }
+
 shinyApp(ui, server)
 
 }
 \seealso{
-Other FileUpload.module.functions: \code{\link{CapturePattern}},
-  \code{\link{FileUploadUI}}, \code{\link{FileUpload}}
+Other CapturePattern module functions: \code{\link{CapturePattern}},
+  \code{\link{GetCaptures}}
 }
 

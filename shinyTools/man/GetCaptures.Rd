@@ -36,4 +36,8 @@ m <- GetCaptures(s, pat)
 apply(m, 2, function(x) substr(s, x[2], x[3]))
 
 }
+\seealso{
+Other CapturePattern module functions: \code{\link{CapturePatternUI}},
+  \code{\link{CapturePattern}}
+}
 

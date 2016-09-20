@@ -57,7 +57,6 @@ shinyApp(ui, server)
 
 }
 \seealso{
-Other FileUpload.module.functions: \code{\link{CapturePatternUI}},
-  \code{\link{CapturePattern}}, \code{\link{FileUpload}}
+Other FileUpload module functions: \code{\link{FileUpload}}
 }
 
