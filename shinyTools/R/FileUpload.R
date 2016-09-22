@@ -18,7 +18,6 @@
 #' @return chr HTML for creating ui elements.
 #'
 #' @examples
-#' library(shiny)
 #' library(shinyTools)
 #'
 #' # check functions as example
@@ -108,7 +107,6 @@ FileUploadUI <- function(id, label, help = "Select files for upload.", rename = 
 #' @return data.frame of information about uploaded files (and user defined generic names)
 #'
 #' @examples
-#' library(shiny)
 #' library(shinyTools)
 #'
 #' # check functions as example

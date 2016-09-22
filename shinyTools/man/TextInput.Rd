@@ -34,7 +34,6 @@ If the user input should not be valid, the function must return a character valu
 Additional argumets can be handed over to checkFun via the list addArgs.
 }
 \examples{
-library(shiny)
 library(shinyTools)
 
 # some function as example

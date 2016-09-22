@@ -12,7 +12,6 @@
 #' @return chr HTML for creating ui elements.
 #'
 #' @examples
-#' library(shiny)
 #' library(shinyTools)
 #'
 #' # some generic strings with regular expressions
@@ -35,6 +34,8 @@
 #' }
 #'
 #' shinyApp(ui, server)
+#'
+#' @import shiny
 #'
 #' @export
 #'
@@ -78,7 +79,6 @@ CapturePatternUI <- function(id, label) {
 #' @return NULL
 #'
 #' @examples
-#' library(shiny)
 #' library(shinyTools)
 #'
 #' # some generic strings with regular expressions

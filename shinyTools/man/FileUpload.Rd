@@ -44,7 +44,6 @@ It must take a chr vector as first argument which are the names defined by the u
 Additional argumets can be handed over to both functions via the list addArgs.
 }
 \examples{
-library(shiny)
 library(shinyTools)
 
 # check functions as example

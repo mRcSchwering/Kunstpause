@@ -9,15 +9,16 @@
 #'
 #' @param id        chr id of this object for shiny session
 #' @param labels    chr arr for textInput labels. length defines how many input fields there are
+#' @param value     chr arr of length 1 or length(labels) defining default string inside all or each input fields.
+#'                  NULL for no default value text. This is an actual input if it is not changed.
 #' @param dummy     chr arr of length 1 or length(labels) defining dummy text inside all or each input fields.
-#'                  NULL for no dummy text.
+#'                  NULL for no dummy text. This appears inside text field but is not an actual input.
 #' @param help      chr or NULL (NULL) for help text placed underneath input fields.
 #' @param horiz     bool (FALSE) whether ui elements should be placed horizontally, not vertically
 #'
 #' @return chr HTML for creating ui elements.
 #'
 #' @examples
-#' library(shiny)
 #' library(shinyTools)
 #'
 #' # some function as example
@@ -41,17 +42,19 @@
 #'
 #' @export
 #'
-TextInputUI <- function(id, labels, dummy = "Insert text here", help = "Some message about input.", horiz = FALSE) {
+TextInputUI <- function(id, labels, value = NULL, dummy = "Insert text here", help = "Some message about input.", horiz = FALSE) {
   ns <- NS(id)
 
   # checks
   if(length(dummy) > 1 && length(dummy) != length(labels)) stop("labels has length ", length(labels), " but dummy has length ", length(dummy))
+  if(length(value) > 1 && length(value) != length(labels)) stop("labels has length ", length(labels), " but value has length ", length(value))
 
   # build ui
   n <- length(labels)
   out <- tagList()
   if(length(dummy) < 2) dummy <- rep(dummy, length(labels))
-  for(i in 1:n) out[[i]] <- textInput(ns(paste0("text_", i)), labels[i], placeholder =  dummy[i])
+  if(length(value) < 2) value <- rep(value, length(labels))
+  for(i in 1:n) out[[i]] <- textInput(ns(paste0("text_", i)), labels[i], value[i], placeholder =  dummy[i])
 
   if(horiz) out <- div(out, class = "shiny-flow-layout")
   out <- tagList(out, uiOutput(ns("errorMessage")))
@@ -86,7 +89,6 @@ TextInputUI <- function(id, labels, dummy = "Insert text here", help = "Some mes
 #' @return chr arr of user provided text input fields or NULL
 #'
 #' @examples
-#' library(shiny)
 #' library(shinyTools)
 #'
 #' # some function as example
@@ -121,10 +123,8 @@ TextInput <- function(input, output, session, n, checkFun = NULL, addArgs = NULL
 
   # output
   value <- reactive({
-    error$text <- NULL
     out <- character(n)
     for(i in 1:n) out[i] <- input[[paste0("text_", i)]]
-    if(any(out == "")) return(NULL)
     if(is.null(checkFun)) return(out)
     error$text <- do.call(checkFun, args = list(out, addArgs))
     if(is.null(error$text)) out else NULL

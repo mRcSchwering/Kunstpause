@@ -41,7 +41,6 @@ So if length(cols) == 2 but 4 capture groups are found, only the first 2 apear c
 Nested capture groups do not work.
 }
 \examples{
-library(shiny)
 library(shinyTools)
 
 # some generic strings with regular expressions

@@ -32,7 +32,6 @@ These are ui elements of the file upload handler, an error message and some text
 In case rename is not NULL, several text input forms for renaming files are created after file upload.
 }
 \examples{
-library(shiny)
 library(shinyTools)
 
 # check functions as example

@@ -4,7 +4,7 @@
 \alias{TextInputUI}
 \title{TextInputUI}
 \usage{
-TextInputUI(id, labels, dummy = "Insert text here",
+TextInputUI(id, labels, value = NULL, dummy = "Insert text here",
   help = "Some message about input.", horiz = FALSE)
 }
 \arguments{
@@ -12,8 +12,11 @@ TextInputUI(id, labels, dummy = "Insert text here",
 
 \item{labels}{chr arr for textInput labels. length defines how many input fields there are}
 
+\item{value}{chr arr of length 1 or length(labels) defining default string inside all or each input fields.
+NULL for no default value text. This is an actual input if it is not changed.}
+
 \item{dummy}{chr arr of length 1 or length(labels) defining dummy text inside all or each input fields.
-NULL for no dummy text.}
+NULL for no dummy text. This appears inside text field but is not an actual input.}
 
 \item{help}{chr or NULL (NULL) for help text placed underneath input fields.}
 
@@ -30,7 +33,6 @@ The length of labels argument defines how many input fields there are.
 So, argument n of the TextInput (server) function must be equal to length(labels).
 }
 \examples{
-library(shiny)
 library(shinyTools)
 
 # some function as example

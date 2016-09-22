@@ -21,7 +21,6 @@ The CapturePattern Module extracts captures from chr strings based on a regular 
 The UI part is a text output of several lines.
 }
 \examples{
-library(shiny)
 library(shinyTools)
 
 # some generic strings with regular expressions
