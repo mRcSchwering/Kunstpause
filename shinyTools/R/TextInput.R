@@ -73,7 +73,9 @@ TextInputUI <- function(id, labels, value = NULL, dummy = "Insert text here", he
 #' With argument checkFun a function name can be defined which will be used as quality control for the text inputs.
 #' This function must take a chr arr as first argument. These are the user provided text inputs.
 #' The function must either return NULL or a chr value. NULL means the input is valid.
-#' If the user input should not be valid, the function must return a character value which will be used as error message.
+#' Thereby the module returns this chr arr.
+#' If the user input should not be valid, the function must return a character value.
+#' This chr value will be rendered as a error message for the user, and the modul returns NULL.
 #'
 #' Additional argumets can be handed over to checkFun via the list addArgs.
 #'

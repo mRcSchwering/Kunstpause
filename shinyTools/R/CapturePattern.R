@@ -70,8 +70,8 @@ CapturePatternUI <- function(id, label) {
 #' @param input      argument used by shiny session
 #' @param output     argument used by shiny session
 #' @param session    argument used by shiny session
-#' @param pat        chr of regular expression
-#' @param lines      chr arr of strings in which the regular expression should capture substrings
+#' @param pat        reactive chr of regular expression
+#' @param lines      reactive chr arr of strings in which the regular expression should capture substrings
 #' @param n          int(= 5) number of lines to be displayed
 #' @param cols       chr arr or NULL(NULL) defining colors to label capture groups in the order they appear in each string
 #'                   If NULL 4 default colors are used (ggl colors).

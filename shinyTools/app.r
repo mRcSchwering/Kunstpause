@@ -3,8 +3,6 @@ library(shinyTools)
 # some function as example
 check <- function(text, add){ if(any(grepl(add$pat, text))) return(paste("Don't use letter", add$pat, "in any entry."))}
 
-source("R/ReactiveTextInput.R")
-
 # little app with module
 ui <- fluidPage(sidebarLayout(
   sidebarPanel(h2("ReactiveTextInputUI"),
@@ -16,8 +14,8 @@ ui <- fluidPage(sidebarLayout(
 
 
 server <-function(input, output, session) {
-  display <- callModule(ReactiveTextInput, "id1", n = reactive(input$nGroups), prefix = NULL, values = c("1", "asd", "asd3"),
-                        checkFun = "check", addArgs = list(pat = "X"))
+  display <- callModule(ReactiveTextInput, "id1", n = reactive(input$nGroups), prefix = "Group",
+                        values = c("Untreated", "Treated"), checkFun = "check", addArgs = list(pat = "X"))
   output$display <- renderPrint(display())
 }
 

@@ -13,9 +13,9 @@ CapturePattern(input, output, session, pat, lines, n = 5, cols = NULL)
 
 \item{session}{argument used by shiny session}
 
-\item{pat}{chr of regular expression}
+\item{pat}{reactive chr of regular expression}
 
-\item{lines}{chr arr of strings in which the regular expression should capture substrings}
+\item{lines}{reactive chr arr of strings in which the regular expression should capture substrings}
 
 \item{n}{int(= 5) number of lines to be displayed}
 
