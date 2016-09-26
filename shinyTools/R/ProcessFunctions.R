@@ -1,0 +1,267 @@
+#' ReadInfo
+#'
+#' Read content of a *.status file and return it as list of class ProcessInfo.
+#' For creating the ProcessInfo object initially in a R script it is better to use \code{\link{RProcessInit}}.
+#' It uses this function but also takes care of some other stuff.
+#'
+#' The *.status file is used to communicate with the shiny session.
+#' Each line in the file is translated into a list element with several entries seperated by ";".
+#' The first entry is used as the element name, the following ones are its values.
+#'
+#' By using the functions \code{\link{RProcessInit}}, \code{\link{RProcessUp}}, \code{\link{Log}}, \code{\link{Try}},
+#' \code{\link{RProcessFinish}} it is ensured that the communication bewteen shiny session and R batch script work and
+#' that no files are falsly overwritten.
+#'
+#' @family RProcess module functions
+#'
+#' @param statusFile  chr path to relevant *.status file
+#'
+#' @return list of class ProcessInfo.
+#'         This list contains information about the current process and is used by other functions of this module.
+#'
+#' @examples
+#'
+#' @export
+#'
+ReadInfo <- function(statusFile){
+  info <- strsplit(readLines(statusFile), ";")
+  names(info) <- sapply(info, function(x) x[1])
+  info <- sapply(info, function(x) x[-1])
+  info$statusFile <- statusFile
+  class(info) <- "ProcessInfo"
+  info
+}
+
+
+
+#' Log
+#'
+#' This is a convenience function for writing a log message.
+#' This should be used in a R script started by shiny with the RProcess module.
+#'
+#' If a log file exists, it is appended by the lines defined in with msg. Each element of msg is a line.
+#' Information about path of the log file, the session id and the process id is taken from the ProcessInfo object (see arguments).
+#' If a session id exists, every line is prefixed with it.
+#' If a process id exists, before writing anything the loaded process id is compared with the current one -- read from the *.status file.
+#' If they do not match, quit() is run.
+#' This ensures that, in case a newer version of the same process is running, the current one will quit and not overwrite anything.
+#'
+#' By using the functions \code{\link{RProcessInit}}, \code{\link{RProcessUp}}, \code{\link{Log}}, \code{\link{Try}},
+#' \code{\link{RProcessFinish}} it is ensured that the communication bewteen shiny session and R batch script work and
+#' that no files are falsly overwritten.
+#'
+#' @family RProcess module functions
+#'
+#' @param msg   chr arr with log messages. Each element is a line.
+#' @param info  ProcessInfo object or NULL (NULL).
+#'              This is a list of relevant information about the process.
+#'              It can be created with \code{\link{RProcessInit}}.
+#'              If NULL the parent environment is searched for an object of class ProcessInfo.
+#'
+#' @return TRUE if a log was written, FALSE if not
+#'
+#' @examples
+#'
+#' @export
+#'
+Log <- function(msg, info = NULL){
+
+  # get ProcessInfo object
+  if(is.null(info)) info <- get(Filter(function(x) class(get(x)) == "ProcessInfo", ls(pos = 1))[1])
+  if(length(info) < 1) stop("Argument info empty or no ProcessInfo object found.")
+
+  # create lines for log msg
+  log <- c("", msg)
+  if(!is.null(info$sessionid)) log <- paste(info$sessionid, log, sep = " : ")
+
+  # write log after confirming pid
+  pid <- ReadInfo(info$statusFile)$pid
+  if(pid != info$pid){
+    quit("no", 0)
+  } else {
+    if(!is.null(info$logFile)){
+      write(log, info$logFile, append = TRUE)
+      return(TRUE)
+    } else {
+      return(FALSE)
+    }
+  }
+}
+
+
+
+#' RProcessInit
+#'
+#' If a R script was started by shiny using the RProcess module, this should be the first command of the script.
+#' This function reads the *.status file and returns it as a list of class ProcessInfo.
+#'
+#' A *.status file is used for communication between the shiny session and the R batch process (started with Rscript).
+#' Information provided by RProcess module is handed over to the R batch process via this file.
+#' Conversely the R batch process writes on this file to hand over status updates to the shiny session.
+#' By using the functions \code{\link{RProcessInit}}, \code{\link{RProcessUp}}, \code{\link{Log}}, \code{\link{Try}},
+#' \code{\link{RProcessFinish}} it is ensured that the communication bewteen shiny session and R batch script work and
+#' that no files are falsly overwritten.
+#'
+#' If a log file exists, it is appended by the lines defined with log. Each element of log is a line.
+#' Information about path of the log file, the session id and the process id is taken from the ProcessInfo object.
+#' If a session id exists, every line is prefixed with it.
+#' If a process id exists, before writing anything the loaded process id is compared with the current one -- read from the *.status file.
+#' If they do not match, quit() is run.
+#' This ensures that, in case a newer version of the same process is running, the current one will quit and not overwrite anything.
+#'
+#'
+#' @family RProcess module functions
+#'
+#' @param args  chr of path to *.status file (commandArgs(TRUE)).
+#'              If the R script was started using RProcess module, this is the first trailing argument of Rscript (default).
+#' @param log   chr arr used as initial log entry for this process. Each element is a line.
+#'
+#' @return list of class ProcessInfo.
+#'         This list contains information about the current process and is used by other functions of this module.
+#'
+#' @examples
+#'
+#' @export
+#'
+RProcessInit <- function( args = commandArgs(TRUE),
+                          log = paste("Starting at", Sys.time()) ){
+
+  if(length(args) < 1) stop("Argument args is empty")
+
+  # reading info
+  info <- ReadInfo(args[1])
+
+  # logging
+  Log( c("", paste(rep("#", 40), collapse = ""), log, "", "ProcessInfo:", "",
+         sapply(1:length(info), function(x) paste0(names(info)[x], ";", paste(info[[x]], collapse = ";")))),
+       info = info )
+
+  # update progress
+  info$progress <- 0.1
+  write(sapply(1:length(info), function(x) paste0(names(info)[x], ";", paste(info[[x]], collapse = ";"))), info$statusFile)
+  info
+}
+
+
+#' RProcessUp
+#'
+#' This is a convenience function used in a R batch script for sending a status update to the shiny session which started it.
+#'
+#' A progess update might be used by the RProcess module in the shiny session to provide a progress bar.
+#' In addition a log entry about the progress update is written in case a log file was defined.
+#' This information is taken from the ProcessInfo object.
+#'
+#' The communication happens via a *.status file.
+#' Information provided by RProcess module is handed over to the R batch process via this file.
+#' Conversely the R batch process writes on this file to hand over status updates to the shiny session.
+#' By using the functions \code{\link{RProcessInit}}, \code{\link{RProcessUp}}, \code{\link{Log}}, \code{\link{Try}},
+#' \code{\link{RProcessFinish}} it is ensured that the communication bewteen shiny session and R batch script work and
+#' that no files are falsly overwritten.
+#'
+#' If a log file exists, it is appended by the lines defined with log. Each element of log is a line.
+#' Information about path of the log file, the session id and the process id is taken from the ProcessInfo object.
+#' If a session id exists, every line is prefixed with it.
+#' If a process id exists, before writing anything the loaded process id is compared with the current one -- read from the *.status file.
+#' If they do not match, quit() is run.
+#' This ensures that, in case a newer version of the same process is running, the current one will quit and not overwrite anything.
+#'
+#' @family RProcess module functions
+#'
+#' @param progress  num > 0 and < 1 indicating progress
+#' @param info      ProcessInfo object or NULL (NULL).
+#'                  This is a list of relevant information about the process.
+#'                  It can be created with \code{\link{RProcessInit}}.
+#'                  If NULL the parent environment is searched for an object of class ProcessInfo.
+#'
+#' @return list of class ProcessInfo.
+#'         This list contains information about the current process and is used by other functions of this module.
+#'
+#' @examples
+#'
+#' @export
+#'
+RProcessUp <- function(progress, info = NULL){
+
+  if(progress >= 1 || progress <= 0) stop("Progress must be greater 0 and smaller 1")
+
+  # look for ProcessInfo object
+  if(is.null(info)) info <- get(Filter(function(x) class(get(x)) == "ProcessInfo", ls(pos = 1))[1])
+  if(length(info) < 1) stop("Argument info empty or no ProcessInfo object found.")
+
+  # write log if pid valid
+  Log(paste("Progress update to", progress), info = info)
+
+  # update progress
+  info$progress <- progress
+  write(sapply(1:length(info), function(x) paste0(names(info)[x], ";", paste(info[[x]], collapse = ";"))), info$statusFile)
+
+  info
+}
+
+
+
+
+#' Try
+#'
+#' A convenience function for wrapping an expression in try and recovering from an error.
+#'
+#' This is intended for use in an R batch script if it was started by a shiny session using the RProcess module.
+#' If the batch script stops because of some error, the shiny session will never know about this.
+#' By wrapping an error-prone expression in this function, a signal that the script failed is given to the shiny session (if ignore = FALSE).
+#' If a log file exists, an entry is made.
+#' This information is taken from the ProcessInfo object.
+#'
+#' The communication happens via a *.status file.
+#' Information provided by RProcess module is handed over to the R batch process via this file.
+#' Conversely the R batch process writes on this file to hand over status updates to the shiny session.
+#' By using the functions \code{\link{RProcessInit}}, \code{\link{RProcessUp}}, \code{\link{Log}}, \code{\link{Try}},
+#' \code{\link{RProcessFinish}} it is ensured that the communication bewteen shiny session and R batch script work and
+#' that no files are falsly overwritten.
+#'
+#' If a session id exists, the log message is prefixed with it.
+#' If a process id exists, before writing anything the loaded process id is compared with the current one -- read from the *.status file.
+#' If they do not match, quit() is run.
+#' This ensures that, in case a newer version of the same process is running, the current one will quit and not overwrite anything.
+#'
+#' @family RProcess module functions
+#'
+#' @param expr      R expression to be evaluated
+#' @param ignore    bool (FALSE) whether the script should continue after an error occured
+#' @param info      ProcessInfo object or NULL (NULL).
+#'                  This is a list of relevant information about the process.
+#'                  It can be created with \code{\link{RProcessInit}}.
+#'                  If NULL the parent environment is searched for an object of class ProcessInfo.
+#'
+#' @return NULL (if error occured) or result of evaluated expr
+#'
+#' @examples
+#'
+#' @export
+#'
+Try <- function(expr, ignore = FALSE, info = NULL){
+
+  # eval expr
+  expr <- substitute(expr)
+  res <- try(eval(expr))
+
+  # get process info
+  if(is.null(info)) info <- get(Filter(function(x) class(get(x)) == "ProcessInfo", ls(pos = 1))[1])
+
+  # action
+  # in case of error write log and update status
+  if(class(res) == "try-error"){
+    res <- gsub("\n", "", res[1])
+    Log(c("Expression:", deparse(expr), "returned error:", res), info = info)
+    if(!ignore){
+      info$progress <- 1
+      info$status <- res
+      Log(paste("Quitting at", Sys.time()), info = info)
+      write(sapply(1:length(info), function(x) paste0(names(info)[x], ";", paste(info[[x]], collapse = ";"))), info$statusFile)
+      quit("no", 0)
+    }
+    out <- NULL
+
+  } else out <- res
+
+  out
+}

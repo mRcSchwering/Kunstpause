@@ -1,5 +1,9 @@
-progress;0
-status
-sign;2016-09-25_21:49_1897
-ifof;id1.rds
+progress;1
+pid;2016-09-26_14:48_1651
+sessionid;id1234
+status;Error in eval(expr, envir, enclos) : object 'a' not found
 pwd;/home/marc/src/mRc_repo/shinyTools/tmp
+ifof;/home/marc/src/mRc_repo/shinyTools/tmp/id1.rds
+RScript;/home/marc/src/mRc_repo/shinyTools/scripts/process.R
+logFile;/home/marc/src/mRc_repo/shinyTools/log/log.log
+statusFile;/home/marc/src/mRc_repo/shinyTools/tmp/id1.status
