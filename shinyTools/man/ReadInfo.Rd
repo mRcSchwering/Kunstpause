@@ -24,7 +24,7 @@ Each line in the file is translated into a list element with several entries sep
 The first entry is used as the element name, the following ones are its values.
 
 By using the functions \code{\link{RProcessInit}}, \code{\link{RProcessUp}}, \code{\link{Log}}, \code{\link{Try}},
-\code{\link{RProcessFinish}} it is ensured that the communication bewteen shiny session and R batch script work and
+\code{\link{RProcessFin}} it is ensured that the communication bewteen shiny session and R batch script work and
 that no files are falsly overwritten.
 }
 \examples{
@@ -32,7 +32,7 @@ that no files are falsly overwritten.
 }
 \seealso{
 Other RProcess module functions: \code{\link{Log}},
-  \code{\link{RProcessInit}}, \code{\link{RProcessUp}},
-  \code{\link{Try}}
+  \code{\link{RProcessFin}}, \code{\link{RProcessInit}},
+  \code{\link{RProcessUp}}, \code{\link{Try}}
 }
 

@@ -12,7 +12,7 @@ Log(msg, info = NULL)
 \item{info}{ProcessInfo object or NULL (NULL).
 This is a list of relevant information about the process.
 It can be created with \code{\link{RProcessInit}}.
-If NULL the parent environment is searched for an object of class ProcessInfo.}
+If NULL the global environment is searched for an object of class ProcessInfo.}
 }
 \value{
 TRUE if a log was written, FALSE if not
@@ -30,15 +30,15 @@ If they do not match, quit() is run.
 This ensures that, in case a newer version of the same process is running, the current one will quit and not overwrite anything.
 
 By using the functions \code{\link{RProcessInit}}, \code{\link{RProcessUp}}, \code{\link{Log}}, \code{\link{Try}},
-\code{\link{RProcessFinish}} it is ensured that the communication bewteen shiny session and R batch script work and
+\code{\link{RProcessFin}} it is ensured that the communication bewteen shiny session and R batch script work and
 that no files are falsly overwritten.
 }
 \examples{
 
 }
 \seealso{
-Other RProcess module functions: \code{\link{RProcessInit}},
-  \code{\link{RProcessUp}}, \code{\link{ReadInfo}},
-  \code{\link{Try}}
+Other RProcess module functions: \code{\link{RProcessFin}},
+  \code{\link{RProcessInit}}, \code{\link{RProcessUp}},
+  \code{\link{ReadInfo}}, \code{\link{Try}}
 }
 

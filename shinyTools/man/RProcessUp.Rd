@@ -4,15 +4,18 @@
 \alias{RProcessUp}
 \title{RProcessUp}
 \usage{
-RProcessUp(progress, info = NULL)
+RProcessUp(progress, log = paste("Progress update to", progress),
+  info = NULL)
 }
 \arguments{
-\item{progress}{num > 0 and < 1 indicating progress (0.9 = 90%)}
+\item{progress}{num > 0 and < 1 indicating progress}
+
+\item{log}{chr arr used as initial log entry for this process. Each element is a line.}
 
 \item{info}{ProcessInfo object or NULL (NULL).
 This is a list of relevant information about the process.
 It can be created with \code{\link{RProcessInit}}.
-If NULL the parent environment is searched for an object of class ProcessInfo.}
+If NULL the global environment is searched for an object of class ProcessInfo.}
 }
 \value{
 list of class ProcessInfo.
@@ -30,7 +33,7 @@ The communication happens via a *.status file.
 Information provided by RProcess module is handed over to the R batch process via this file.
 Conversely the R batch process writes on this file to hand over status updates to the shiny session.
 By using the functions \code{\link{RProcessInit}}, \code{\link{RProcessUp}}, \code{\link{Log}}, \code{\link{Try}},
-\code{\link{RProcessFinish}} it is ensured that the communication bewteen shiny session and R batch script work and
+\code{\link{RProcessFin}} it is ensured that the communication bewteen shiny session and R batch script work and
 that no files are falsly overwritten.
 
 If a log file exists, it is appended by the lines defined with log. Each element of log is a line.
@@ -45,7 +48,7 @@ This ensures that, in case a newer version of the same process is running, the c
 }
 \seealso{
 Other RProcess module functions: \code{\link{Log}},
-  \code{\link{RProcessInit}}, \code{\link{ReadInfo}},
-  \code{\link{Try}}
+  \code{\link{RProcessFin}}, \code{\link{RProcessInit}},
+  \code{\link{ReadInfo}}, \code{\link{Try}}
 }
 

@@ -14,19 +14,20 @@ If the R script was started using RProcess module, this is the first trailing ar
 \item{log}{chr arr used as initial log entry for this process. Each element is a line.}
 }
 \value{
-list of class ProcessInfo.
-        This list contains information about the current process and is used by other functions of this module.
+input object as defined in RProcess module
 }
 \description{
 If a R script was started by shiny using the RProcess module, this should be the first command of the script.
-This function reads the *.status file and returns it as a list of class ProcessInfo.
+This function reads the *.status file to retrieve information about the process and load the input.
+As a side effect an object 'info' of class 'ProcessInfo' is written into the global envir.
+This is a list which contains information about the current process. It is used by other functions of this module.
 }
 \details{
 A *.status file is used for communication between the shiny session and the R batch process (started with Rscript).
 Information provided by RProcess module is handed over to the R batch process via this file.
 Conversely the R batch process writes on this file to hand over status updates to the shiny session.
 By using the functions \code{\link{RProcessInit}}, \code{\link{RProcessUp}}, \code{\link{Log}}, \code{\link{Try}},
-\code{\link{RProcessFinish}} it is ensured that the communication bewteen shiny session and R batch script work and
+\code{\link{RProcessFin}} it is ensured that the communication bewteen shiny session and R batch script work and
 that no files are falsly overwritten.
 
 If a log file exists, it is appended by the lines defined with log. Each element of log is a line.
@@ -41,7 +42,7 @@ This ensures that, in case a newer version of the same process is running, the c
 }
 \seealso{
 Other RProcess module functions: \code{\link{Log}},
-  \code{\link{RProcessUp}}, \code{\link{ReadInfo}},
-  \code{\link{Try}}
+  \code{\link{RProcessFin}}, \code{\link{RProcessUp}},
+  \code{\link{ReadInfo}}, \code{\link{Try}}
 }
 
