@@ -28,6 +28,7 @@ ReadInfo <- function(statusFile){
   names(info) <- sapply(info, function(x) x[1])
   info <- sapply(info, function(x) x[-1])
   info$statusFile <- statusFile
+  info <- lapply(info, function(x) if(length(x) < 1) NULL else x)
   class(info) <- "ProcessInfo"
   info
 }
@@ -147,6 +148,9 @@ RProcessInit <- function( args = commandArgs(TRUE),
   info$progress <- 0.1
   write(sapply(1:length(info), function(x) paste0(names(info)[x], ";", paste(info[[x]], collapse = ";"))), info$statusFile)
   info <<- info
+
+  # set wd
+  if(!is.null(info$pwd)) setwd(info$pwd)
 
   input
 }
@@ -273,11 +277,12 @@ Try <- function(expr, ignore = FALSE, info = NULL){
       Log(paste("Quitting at", Sys.time()), info = info)
       write(sapply(1:length(info), function(x) paste0(names(info)[x], ";", paste(info[[x]], collapse = ";"))), info$statusFile)
       quit("no", 1)
+    } else {
+      Log("Error is ignored", info = info)
     }
     out <- NULL
 
   } else out <- res
-
   out
 }
 
