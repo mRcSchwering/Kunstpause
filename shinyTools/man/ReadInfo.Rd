@@ -23,16 +23,18 @@ The *.status file is used to communicate with the shiny session.
 Each line in the file is translated into a list element with several entries seperated by ";".
 The first entry is used as the element name, the following ones are its values.
 
-By using the functions \code{\link{RProcessInit}}, \code{\link{RProcessUp}}, \code{\link{Log}}, \code{\link{Try}},
-\code{\link{RProcessFin}} it is ensured that the communication bewteen shiny session and R batch script work and
+By using the functions \code{\link{Init}}, \code{\link{Up}}, \code{\link{Log}}, \code{\link{Try}},
+\code{\link{Fin}} it is ensured that the communication bewteen shiny session and R batch script work and
 that no files are falsly overwritten.
 }
 \examples{
 
 }
 \seealso{
-Other RProcess module functions: \code{\link{Log}},
-  \code{\link{RProcessFin}}, \code{\link{RProcessInit}},
-  \code{\link{RProcessUp}}, \code{\link{Try}}
+Other RProcess module functions: \code{\link{Fin}},
+  \code{\link{Init}}, \code{\link{Log}},
+  \code{\link{RProcessStartUI}},
+  \code{\link{RProcessStart}}, \code{\link{Try}},
+  \code{\link{Up}}
 }
 

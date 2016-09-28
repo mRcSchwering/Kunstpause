@@ -1,24 +1,23 @@
-library(shinyTools)
+# read input and info about process, report to app that it started
+input <- shinyTools::Init(commandArgs(TRUE))
 
-print(commandArgs(TRUE))
+# Log sth
+shinyTools::Log(c("Input is", input))
 
-# Init
-input <- RProcessInit(commandArgs(TRUE))
-#input <- RProcessInit("/home/marc/src/mRc_repo/shinyTools/tmp/id1.status")
-
+# do stuff
 Sys.sleep(4)
 
-# Update
-info <- RProcessUp(0.2)
+# status update to shiny session
+info <- shinyTools::Up(0.2)
 
-# Log
-Log(c("Input is", input))
+# make plot
+input <- Try(ggplot2::qplot(1:100, dpois(1:100, input)))
 
-# Process
-Try(sum(a+2), ignore = TRUE)
+# fail, report to shiny session but continue
+input <- shinyTools::Try(1+"asd", ignore = TRUE)
 
-
-RProcessFin("asd")
+# finish return result to shiny session
+shinyTools::Fin(input)
 
 
 

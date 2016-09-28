@@ -8,8 +8,8 @@
 #' Each line in the file is translated into a list element with several entries seperated by ";".
 #' The first entry is used as the element name, the following ones are its values.
 #'
-#' By using the functions \code{\link{RProcessInit}}, \code{\link{RProcessUp}}, \code{\link{Log}}, \code{\link{Try}},
-#' \code{\link{RProcessFin}} it is ensured that the communication bewteen shiny session and R batch script work and
+#' By using the functions \code{\link{Init}}, \code{\link{Up}}, \code{\link{Log}}, \code{\link{Try}},
+#' \code{\link{Fin}} it is ensured that the communication bewteen shiny session and R batch script work and
 #' that no files are falsly overwritten.
 #'
 #' @family RProcess module functions
@@ -47,8 +47,8 @@ ReadInfo <- function(statusFile){
 #' If they do not match, quit() is run.
 #' This ensures that, in case a newer version of the same process is running, the current one will quit and not overwrite anything.
 #'
-#' By using the functions \code{\link{RProcessInit}}, \code{\link{RProcessUp}}, \code{\link{Log}}, \code{\link{Try}},
-#' \code{\link{RProcessFin}} it is ensured that the communication bewteen shiny session and R batch script work and
+#' By using the functions \code{\link{Init}}, \code{\link{Up}}, \code{\link{Log}}, \code{\link{Try}},
+#' \code{\link{Fin}} it is ensured that the communication bewteen shiny session and R batch script work and
 #' that no files are falsly overwritten.
 #'
 #' @family RProcess module functions
@@ -93,7 +93,7 @@ Log <- function(msg, info = NULL){
 
 
 
-#' RProcessInit
+#' Init
 #'
 #' If a R script was started by shiny using the RProcess module, this should be the first command of the script.
 #' This function reads the *.status file to retrieve information about the process and load the input.
@@ -103,8 +103,8 @@ Log <- function(msg, info = NULL){
 #' A *.status file is used for communication between the shiny session and the R batch process (started with Rscript).
 #' Information provided by RProcess module is handed over to the R batch process via this file.
 #' Conversely the R batch process writes on this file to hand over status updates to the shiny session.
-#' By using the functions \code{\link{RProcessInit}}, \code{\link{RProcessUp}}, \code{\link{Log}}, \code{\link{Try}},
-#' \code{\link{RProcessFin}} it is ensured that the communication bewteen shiny session and R batch script work and
+#' By using the functions \code{\link{Init}}, \code{\link{Up}}, \code{\link{Log}}, \code{\link{Try}},
+#' \code{\link{Fin}} it is ensured that the communication bewteen shiny session and R batch script work and
 #' that no files are falsly overwritten.
 #'
 #' If a log file exists, it is appended by the lines defined with log. Each element of log is a line.
@@ -128,7 +128,7 @@ Log <- function(msg, info = NULL){
 #'
 #' @export
 #'
-RProcessInit <- function( args = commandArgs(TRUE),
+Init <- function( args = commandArgs(TRUE),
                           log = paste("Starting at", Sys.time()) ){
 
   if(length(args) < 1) stop("Argument args is empty")
@@ -156,7 +156,7 @@ RProcessInit <- function( args = commandArgs(TRUE),
 }
 
 
-#' RProcessUp
+#' Up
 #'
 #' This is a convenience function used in a R batch script for sending a status update to the shiny session which started it.
 #'
@@ -167,8 +167,8 @@ RProcessInit <- function( args = commandArgs(TRUE),
 #' The communication happens via a *.status file.
 #' Information provided by RProcess module is handed over to the R batch process via this file.
 #' Conversely the R batch process writes on this file to hand over status updates to the shiny session.
-#' By using the functions \code{\link{RProcessInit}}, \code{\link{RProcessUp}}, \code{\link{Log}}, \code{\link{Try}},
-#' \code{\link{RProcessFin}} it is ensured that the communication bewteen shiny session and R batch script work and
+#' By using the functions \code{\link{Init}}, \code{\link{Up}}, \code{\link{Log}}, \code{\link{Try}},
+#' \code{\link{Fin}} it is ensured that the communication bewteen shiny session and R batch script work and
 #' that no files are falsly overwritten.
 #'
 #' If a log file exists, it is appended by the lines defined with log. Each element of log is a line.
@@ -194,7 +194,7 @@ RProcessInit <- function( args = commandArgs(TRUE),
 #'
 #' @export
 #'
-RProcessUp <- function(progress, log = paste("Progress update to", progress), info = NULL){
+Up <- function(progress, log = paste("Progress update to", progress), info = NULL){
 
   if(progress >= 1 || progress <= 0) stop("Progress must be greater 0 and smaller 1")
 
@@ -230,8 +230,8 @@ RProcessUp <- function(progress, log = paste("Progress update to", progress), in
 #' The communication happens via a *.status file.
 #' Information provided by RProcess module is handed over to the R batch process via this file.
 #' Conversely the R batch process writes on this file to hand over status updates to the shiny session.
-#' By using the functions \code{\link{RProcessInit}}, \code{\link{RProcessUp}}, \code{\link{Log}}, \code{\link{Try}},
-#' \code{\link{RProcessFin}} it is ensured that the communication bewteen shiny session and R batch script work and
+#' By using the functions \code{\link{Init}}, \code{\link{Up}}, \code{\link{Log}}, \code{\link{Try}},
+#' \code{\link{Fin}} it is ensured that the communication bewteen shiny session and R batch script work and
 #' that no files are falsly overwritten.
 #'
 #' If a session id exists, the log message is prefixed with it.
@@ -290,7 +290,7 @@ Try <- function(expr, ignore = FALSE, info = NULL){
 
 
 
-#' RProcessFin
+#' Fin
 #'
 #' This is a convenience function for a R batch script started by a shiny session with the RProcess module.
 #' It should be the last command of a script since it writes an output file and send a termination singal.
@@ -302,8 +302,8 @@ Try <- function(expr, ignore = FALSE, info = NULL){
 #' The communication happens via a *.status file.
 #' Information provided by RProcess module is handed over to the R batch process via this file.
 #' Conversely the R batch process writes on this file to hand over status updates to the shiny session.
-#' By using the functions \code{\link{RProcessInit}}, \code{\link{RProcessUp}}, \code{\link{Log}}, \code{\link{Try}},
-#' \code{\link{RProcessFin}} it is ensured that the communication bewteen shiny session and R batch script work and
+#' By using the functions \code{\link{Init}}, \code{\link{Up}}, \code{\link{Log}}, \code{\link{Try}},
+#' \code{\link{Fin}} it is ensured that the communication bewteen shiny session and R batch script work and
 #' that no files are falsly overwritten.
 #'
 #' If a log file exists, it is appended by the lines defined with log. Each element of log is a line.
@@ -328,7 +328,7 @@ Try <- function(expr, ignore = FALSE, info = NULL){
 #'
 #' @export
 #'
-RProcessFin <- function(output, log = paste("Process finishes at", Sys.time()), info = NULL){
+Fin <- function(output, log = paste("Process finishes at", Sys.time()), info = NULL){
 
   # look for ProcessInfo object
   if(is.null(info)) info <- get(

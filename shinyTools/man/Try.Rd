@@ -32,8 +32,8 @@ This information is taken from the ProcessInfo object.
 The communication happens via a *.status file.
 Information provided by RProcess module is handed over to the R batch process via this file.
 Conversely the R batch process writes on this file to hand over status updates to the shiny session.
-By using the functions \code{\link{RProcessInit}}, \code{\link{RProcessUp}}, \code{\link{Log}}, \code{\link{Try}},
-\code{\link{RProcessFin}} it is ensured that the communication bewteen shiny session and R batch script work and
+By using the functions \code{\link{Init}}, \code{\link{Up}}, \code{\link{Log}}, \code{\link{Try}},
+\code{\link{Fin}} it is ensured that the communication bewteen shiny session and R batch script work and
 that no files are falsly overwritten.
 
 If a session id exists, the log message is prefixed with it.
@@ -45,8 +45,10 @@ This ensures that, in case a newer version of the same process is running, the c
 
 }
 \seealso{
-Other RProcess module functions: \code{\link{Log}},
-  \code{\link{RProcessFin}}, \code{\link{RProcessInit}},
-  \code{\link{RProcessUp}}, \code{\link{ReadInfo}}
+Other RProcess module functions: \code{\link{Fin}},
+  \code{\link{Init}}, \code{\link{Log}},
+  \code{\link{RProcessStartUI}},
+  \code{\link{RProcessStart}}, \code{\link{ReadInfo}},
+  \code{\link{Up}}
 }
 

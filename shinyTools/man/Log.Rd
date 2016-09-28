@@ -29,16 +29,17 @@ If a process id exists, before writing anything the loaded process id is compare
 If they do not match, quit() is run.
 This ensures that, in case a newer version of the same process is running, the current one will quit and not overwrite anything.
 
-By using the functions \code{\link{RProcessInit}}, \code{\link{RProcessUp}}, \code{\link{Log}}, \code{\link{Try}},
-\code{\link{RProcessFin}} it is ensured that the communication bewteen shiny session and R batch script work and
+By using the functions \code{\link{Init}}, \code{\link{Up}}, \code{\link{Log}}, \code{\link{Try}},
+\code{\link{Fin}} it is ensured that the communication bewteen shiny session and R batch script work and
 that no files are falsly overwritten.
 }
 \examples{
 
 }
 \seealso{
-Other RProcess module functions: \code{\link{RProcessFin}},
-  \code{\link{RProcessInit}}, \code{\link{RProcessUp}},
-  \code{\link{ReadInfo}}, \code{\link{Try}}
+Other RProcess module functions: \code{\link{Fin}},
+  \code{\link{Init}}, \code{\link{RProcessStartUI}},
+  \code{\link{RProcessStart}}, \code{\link{ReadInfo}},
+  \code{\link{Try}}, \code{\link{Up}}
 }
 
