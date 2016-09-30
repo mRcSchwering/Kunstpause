@@ -69,7 +69,7 @@ Log <- function(msg, info = NULL){
 
   # get ProcessInfo object
   if(is.null(info)) info <- get(
-    Filter(function(x) class(get(x, envir = globalenv())) == "ProcessInfo", ls(envir = globalenv()))[1],
+    Filter(function(x) class(get(x, envir = globalenv()))[1] == "ProcessInfo", ls(envir = globalenv()))[1],
     envir = globalenv())
   if(length(info) < 1) stop("Argument info empty or no ProcessInfo object found.")
 
@@ -200,7 +200,7 @@ Up <- function(progress, log = paste("Progress update to", progress), info = NUL
 
   # look for ProcessInfo object
   if(is.null(info)) info <- get(
-    Filter(function(x) class(get(x, envir = globalenv())) == "ProcessInfo", ls(envir = globalenv()))[1],
+    Filter(function(x) class(get(x, envir = globalenv()))[1] == "ProcessInfo", ls(envir = globalenv()))[1],
     envir = globalenv())
   if(length(info) < 1) stop("Argument info empty or no ProcessInfo object found.")
 
@@ -262,13 +262,13 @@ Try <- function(expr, ignore = FALSE, info = NULL){
 
   # get process info
   if(is.null(info)) info <- get(
-    Filter(function(x) class(get(x, envir = globalenv())) == "ProcessInfo", ls(envir = globalenv()))[1],
+    Filter(function(x) class(get(x, envir = globalenv()))[1] == "ProcessInfo", ls(envir = globalenv()))[1],
     envir = globalenv())
   if(length(info) < 1) stop("Argument info empty or no ProcessInfo object found.")
 
   # action
   # in case of error write log and update status
-  if(class(res) == "try-error"){
+  if(class(res)[1] == "try-error"){
     res <- gsub("\n", "", res[1])
     Log(c("Expression:", deparse(expr), "returned error:", res), info = info)
     if(!ignore){
@@ -332,7 +332,7 @@ Fin <- function(output, log = paste("Process finishes at", Sys.time()), info = N
 
   # look for ProcessInfo object
   if(is.null(info)) info <- get(
-    Filter(function(x) class(get(x, envir = globalenv())) == "ProcessInfo", ls(envir = globalenv()))[1],
+    Filter(function(x) class(get(x, envir = globalenv()))[1] == "ProcessInfo", ls(envir = globalenv()))[1],
     envir = globalenv())
   if(length(info) < 1) stop("Argument info empty or no ProcessInfo object found.")
 

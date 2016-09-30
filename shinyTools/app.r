@@ -12,7 +12,7 @@ ui <- fluidPage(sidebarLayout(
     actionButton("trigger", "Start"),
     helpText("Plot is created in R batch script with 4s delay.")
   ),
-  mainPanel(h2("Plot Output"), plotOutput("res1"))
+  mainPanel(h2("Plot Output"), plotOutput("res1"), verbatimTextOutput("res2"))
 ))
 
 server <-function(input, output, session) {
@@ -21,8 +21,25 @@ server <-function(input, output, session) {
              script = "./scripts/process.R", logFile = "./log/log.log", pwd = "./tmp",
              checkFun = "check", addArgs = list(n = 0))
 
-  #output$res1 <- renderPlot(res1())
-  output$res2 <- renderPrint(input$num2^2)
+  id <- "process"
+  pwd <- "./tmp"
+
+  id <- paste0(id, "-ifof")
+  pwd <- normalizePath(pwd)
+
+  status <- reactiveFileReader(500, session, file.path(pwd, paste0(id, ".status")),
+                               function(x) if(file.exists(x)) ReadInfo(x) else NULL)
+
+  res1 <- eventReactive(status(), {
+    if(is.null(status()) || status()$progress != "1") NULL else {
+      out <- readRDS(file.path(pwd, paste0(id, ".rds")))
+      out
+    }
+  })
+
+
+  output$res1 <- renderPlot(res1())
+  output$res2 <- renderPrint(status())
 }
 
 shinyApp(ui, server)

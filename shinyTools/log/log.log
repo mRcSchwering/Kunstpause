@@ -134,3 +134,551 @@ Input is
 0
 
 Progress update to 0.2
+
+
+########################################
+Starting at 2016-09-30 14:30:30
+
+ProcessInfo:
+
+progress;0
+pid;2016-09-30_14:30_6139
+sessionid;
+status;
+pwd;/home/marc/src/mRc_repo/shinyTools/tmp
+ifof;/home/marc/src/mRc_repo/shinyTools/tmp/process-ifof.rds
+Rscript;/home/marc/src/mRc_repo/shinyTools/scripts/process.R
+logFile;/home/marc/src/mRc_repo/shinyTools/log/log.log
+statusFile;/home/marc/src/mRc_repo/shinyTools/tmp/process-ifof.status
+
+Input is
+10
+
+Progress update to 0.2
+
+
+########################################
+Starting at 2016-09-30 14:31:35
+
+ProcessInfo:
+
+progress;0
+pid;2016-09-30_14:31_4158
+sessionid;
+status;
+pwd;/home/marc/src/mRc_repo/shinyTools/tmp
+ifof;/home/marc/src/mRc_repo/shinyTools/tmp/process-ifof.rds
+Rscript;/home/marc/src/mRc_repo/shinyTools/scripts/process.R
+logFile;/home/marc/src/mRc_repo/shinyTools/log/log.log
+statusFile;/home/marc/src/mRc_repo/shinyTools/tmp/process-ifof.status
+
+Input is
+10
+
+Progress update to 0.2
+
+
+########################################
+Starting at 2016-09-30 14:32:01
+
+ProcessInfo:
+
+progress;0
+pid;2016-09-30_14:32_5420
+sessionid;
+status;
+pwd;/home/marc/src/mRc_repo/shinyTools/tmp
+ifof;/home/marc/src/mRc_repo/shinyTools/tmp/process-ifof.rds
+Rscript;/home/marc/src/mRc_repo/shinyTools/scripts/process.R
+logFile;/home/marc/src/mRc_repo/shinyTools/log/log.log
+statusFile;/home/marc/src/mRc_repo/shinyTools/tmp/process-ifof.status
+
+Input is
+10
+
+Progress update to 0.2
+
+
+########################################
+Starting at 2016-09-30 14:32:40
+
+ProcessInfo:
+
+progress;0
+pid;2016-09-30_14:32_9389
+sessionid;
+status;
+pwd;/home/marc/src/mRc_repo/shinyTools/tmp
+ifof;/home/marc/src/mRc_repo/shinyTools/tmp/process-ifof.rds
+Rscript;/home/marc/src/mRc_repo/shinyTools/scripts/process.R
+logFile;/home/marc/src/mRc_repo/shinyTools/log/log.log
+statusFile;/home/marc/src/mRc_repo/shinyTools/tmp/process-ifof.status
+
+Input is
+10
+
+Progress update to 0.2
+
+Expression:
+1 + "asd"
+returned error:
+Error in 1 + "asd" : non-numeric argument to binary operator
+
+Error is ignored
+
+Process finishes at 2016-09-30 14:32:44
+
+
+########################################
+Starting at 2016-09-30 14:33:53
+
+ProcessInfo:
+
+progress;0
+pid;2016-09-30_14:33_2807
+sessionid;
+status;
+pwd;/home/marc/src/mRc_repo/shinyTools/tmp
+ifof;/home/marc/src/mRc_repo/shinyTools/tmp/process-ifof.rds
+Rscript;/home/marc/src/mRc_repo/shinyTools/scripts/process.R
+logFile;/home/marc/src/mRc_repo/shinyTools/log/log.log
+statusFile;/home/marc/src/mRc_repo/shinyTools/tmp/process-ifof.status
+
+Input is
+6
+
+Progress update to 0.4
+
+Progress update to 0.7
+
+Expression:
+1 + "asd"
+returned error:
+Error in 1 + "asd" : non-numeric argument to binary operator
+
+Error is ignored
+
+Process finishes at 2016-09-30 14:34:02
+
+
+########################################
+Starting at 2016-09-30 14:34:34
+
+ProcessInfo:
+
+progress;0
+pid;2016-09-30_14:34_2972
+sessionid;
+status;
+pwd;/home/marc/src/mRc_repo/shinyTools/tmp
+ifof;/home/marc/src/mRc_repo/shinyTools/tmp/process-ifof.rds
+Rscript;/home/marc/src/mRc_repo/shinyTools/scripts/process.R
+logFile;/home/marc/src/mRc_repo/shinyTools/log/log.log
+statusFile;/home/marc/src/mRc_repo/shinyTools/tmp/process-ifof.status
+
+Input is
+6
+
+Progress update to 0.4
+
+Progress update to 0.7
+
+Expression:
+1 + "asd"
+returned error:
+Error in 1 + "asd" : non-numeric argument to binary operator
+
+Error is ignored
+
+Process finishes at 2016-09-30 14:34:42
+
+
+########################################
+Starting at 2016-09-30 14:36:14
+
+ProcessInfo:
+
+progress;0
+pid;2016-09-30_14:36_0119
+sessionid;
+status;
+pwd;/home/marc/src/mRc_repo/shinyTools/tmp
+ifof;/home/marc/src/mRc_repo/shinyTools/tmp/process-ifof.rds
+Rscript;/home/marc/src/mRc_repo/shinyTools/scripts/process.R
+logFile;/home/marc/src/mRc_repo/shinyTools/log/log.log
+statusFile;/home/marc/src/mRc_repo/shinyTools/tmp/process-ifof.status
+
+Input is
+10
+
+Progress update to 0.4
+
+Progress update to 0.7
+
+Expression:
+1 + "asd"
+returned error:
+Error in 1 + "asd" : non-numeric argument to binary operator
+
+Error is ignored
+
+Process finishes at 2016-09-30 14:36:22
+
+
+########################################
+Starting at 2016-09-30 14:44:02
+
+ProcessInfo:
+
+progress;0
+pid;2016-09-30_14:44_1604
+sessionid;
+status;
+pwd;/home/marc/src/mRc_repo/shinyTools/tmp
+ifof;/home/marc/src/mRc_repo/shinyTools/tmp/process-ifof.rds
+Rscript;/home/marc/src/mRc_repo/shinyTools/scripts/process.R
+logFile;/home/marc/src/mRc_repo/shinyTools/log/log.log
+statusFile;/home/marc/src/mRc_repo/shinyTools/tmp/process-ifof.status
+
+Input is
+10
+
+Progress update to 0.4
+
+Progress update to 0.7
+
+Expression:
+1 + "asd"
+returned error:
+Error in 1 + "asd" : non-numeric argument to binary operator
+
+Error is ignored
+
+Process finishes at 2016-09-30 14:44:11
+
+
+########################################
+Starting at 2016-09-30 14:44:38
+
+ProcessInfo:
+
+progress;0
+pid;2016-09-30_14:44_8621
+sessionid;
+status;
+pwd;/home/marc/src/mRc_repo/shinyTools/tmp
+ifof;/home/marc/src/mRc_repo/shinyTools/tmp/process-ifof.rds
+Rscript;/home/marc/src/mRc_repo/shinyTools/scripts/process.R
+logFile;/home/marc/src/mRc_repo/shinyTools/log/log.log
+statusFile;/home/marc/src/mRc_repo/shinyTools/tmp/process-ifof.status
+
+Input is
+10
+
+Progress update to 0.4
+
+Progress update to 0.7
+
+Expression:
+1 + "asd"
+returned error:
+Error in 1 + "asd" : non-numeric argument to binary operator
+
+Error is ignored
+
+Process finishes at 2016-09-30 14:44:46
+
+
+########################################
+Starting at 2016-09-30 14:45:29
+
+ProcessInfo:
+
+progress;0
+pid;2016-09-30_14:45_2093
+sessionid;
+status;
+pwd;/home/marc/src/mRc_repo/shinyTools/tmp
+ifof;/home/marc/src/mRc_repo/shinyTools/tmp/process-ifof.rds
+Rscript;/home/marc/src/mRc_repo/shinyTools/scripts/process.R
+logFile;/home/marc/src/mRc_repo/shinyTools/log/log.log
+statusFile;/home/marc/src/mRc_repo/shinyTools/tmp/process-ifof.status
+
+Input is
+10
+
+Progress update to 0.4
+
+Progress update to 0.7
+
+Expression:
+1 + "asd"
+returned error:
+Error in 1 + "asd" : non-numeric argument to binary operator
+
+Error is ignored
+
+Process finishes at 2016-09-30 14:45:38
+
+
+########################################
+Starting at 2016-09-30 14:46:59
+
+ProcessInfo:
+
+progress;0
+pid;2016-09-30_14:46_3260
+sessionid;
+status;
+pwd;/home/marc/src/mRc_repo/shinyTools/tmp
+ifof;/home/marc/src/mRc_repo/shinyTools/tmp/process-ifof.rds
+Rscript;/home/marc/src/mRc_repo/shinyTools/scripts/process.R
+logFile;/home/marc/src/mRc_repo/shinyTools/log/log.log
+statusFile;/home/marc/src/mRc_repo/shinyTools/tmp/process-ifof.status
+
+Input is
+10
+
+Progress update to 0.4
+
+Progress update to 0.7
+
+Expression:
+1 + "asd"
+returned error:
+Error in 1 + "asd" : non-numeric argument to binary operator
+
+Error is ignored
+
+Process finishes at 2016-09-30 14:47:07
+
+
+########################################
+Starting at 2016-09-30 14:47:41
+
+ProcessInfo:
+
+progress;0
+pid;2016-09-30_14:47_8010
+sessionid;
+status;
+pwd;/home/marc/src/mRc_repo/shinyTools/tmp
+ifof;/home/marc/src/mRc_repo/shinyTools/tmp/process-ifof.rds
+Rscript;/home/marc/src/mRc_repo/shinyTools/scripts/process.R
+logFile;/home/marc/src/mRc_repo/shinyTools/log/log.log
+statusFile;/home/marc/src/mRc_repo/shinyTools/tmp/process-ifof.status
+
+Input is
+10
+
+Progress update to 0.4
+
+Progress update to 0.7
+
+Expression:
+1 + "asd"
+returned error:
+Error in 1 + "asd" : non-numeric argument to binary operator
+
+Error is ignored
+
+Process finishes at 2016-09-30 14:47:49
+
+
+########################################
+Starting at 2016-09-30 14:50:24
+
+ProcessInfo:
+
+progress;0
+pid;2016-09-30_14:50_9285
+sessionid;
+status;
+pwd;/home/marc/src/mRc_repo/shinyTools/tmp
+ifof;/home/marc/src/mRc_repo/shinyTools/tmp/process-ifof.rds
+Rscript;/home/marc/src/mRc_repo/shinyTools/scripts/process.R
+logFile;/home/marc/src/mRc_repo/shinyTools/log/log.log
+statusFile;/home/marc/src/mRc_repo/shinyTools/tmp/process-ifof.status
+
+Input is
+10
+
+Progress update to 0.4
+
+Progress update to 0.7
+
+Expression:
+1 + "asd"
+returned error:
+Error in 1 + "asd" : non-numeric argument to binary operator
+
+Error is ignored
+
+Process finishes at 2016-09-30 14:50:32
+
+
+########################################
+Starting at 2016-09-30 14:55:21
+
+ProcessInfo:
+
+progress;0
+pid;2016-09-30_14:55_4783
+sessionid;
+status;
+pwd;/home/marc/src/mRc_repo/shinyTools/tmp
+ifof;/home/marc/src/mRc_repo/shinyTools/tmp/process-ifof.rds
+Rscript;/home/marc/src/mRc_repo/shinyTools/scripts/process.R
+logFile;/home/marc/src/mRc_repo/shinyTools/log/log.log
+statusFile;/home/marc/src/mRc_repo/shinyTools/tmp/process-ifof.status
+
+Input is
+10
+
+Progress update to 0.4
+
+Progress update to 0.7
+
+Expression:
+1 + "asd"
+returned error:
+Error in 1 + "asd" : non-numeric argument to binary operator
+
+Error is ignored
+
+Process finishes at 2016-09-30 14:55:29
+
+
+########################################
+Starting at 2016-09-30 14:58:23
+
+ProcessInfo:
+
+progress;1
+pid;2016-09-30_14:55_4783
+sessionid;
+status;
+pwd;/home/marc/src/mRc_repo/shinyTools/tmp
+ifof;/home/marc/src/mRc_repo/shinyTools/tmp/process-ifof.rds
+Rscript;/home/marc/src/mRc_repo/shinyTools/scripts/process.R
+logFile;/home/marc/src/mRc_repo/shinyTools/log/log.log
+statusFile;tmp/process-ifof.status
+
+
+########################################
+Starting at 2016-09-30 15:05:09
+
+ProcessInfo:
+
+progress;0
+pid;2016-09-30_15:05_4790
+sessionid;
+status;
+pwd;/home/marc/src/mRc_repo/shinyTools/tmp
+ifof;/home/marc/src/mRc_repo/shinyTools/tmp/process-ifof.rds
+Rscript;/home/marc/src/mRc_repo/shinyTools/scripts/process.R
+logFile;/home/marc/src/mRc_repo/shinyTools/log/log.log
+statusFile;/home/marc/src/mRc_repo/shinyTools/tmp/process-ifof.status
+
+Input is
+10
+
+Progress update to 0.4
+
+Progress update to 0.7
+
+Process finishes at 2016-09-30 15:05:17
+
+
+########################################
+Starting at 2016-09-30 15:06:08
+
+ProcessInfo:
+
+progress;0
+pid;2016-09-30_15:06_8733
+sessionid;
+status;
+pwd;/home/marc/src/mRc_repo/shinyTools/tmp
+ifof;/home/marc/src/mRc_repo/shinyTools/tmp/process-ifof.rds
+Rscript;/home/marc/src/mRc_repo/shinyTools/scripts/process.R
+logFile;/home/marc/src/mRc_repo/shinyTools/log/log.log
+statusFile;/home/marc/src/mRc_repo/shinyTools/tmp/process-ifof.status
+
+Input is
+10
+
+Progress update to 0.4
+
+Progress update to 0.7
+
+Process finishes at 2016-09-30 15:06:16
+
+
+########################################
+Starting at 2016-09-30 15:07:20
+
+ProcessInfo:
+
+progress;0
+pid;2016-09-30_15:07_0750
+sessionid;
+status;
+pwd;/home/marc/src/mRc_repo/shinyTools/tmp
+ifof;/home/marc/src/mRc_repo/shinyTools/tmp/process-ifof.rds
+Rscript;/home/marc/src/mRc_repo/shinyTools/scripts/process.R
+logFile;/home/marc/src/mRc_repo/shinyTools/log/log.log
+statusFile;/home/marc/src/mRc_repo/shinyTools/tmp/process-ifof.status
+
+
+########################################
+Starting at 2016-09-30 15:08:28
+
+ProcessInfo:
+
+progress;0.1
+pid;2016-09-30_15:07_0750
+sessionid;
+status;
+pwd;/home/marc/src/mRc_repo/shinyTools/tmp
+ifof;/home/marc/src/mRc_repo/shinyTools/tmp/process-ifof.rds
+Rscript;/home/marc/src/mRc_repo/shinyTools/scripts/process.R
+logFile;/home/marc/src/mRc_repo/shinyTools/log/log.log
+statusFile;tmp/process-ifof.status
+
+
+########################################
+Starting at 2016-09-30 15:30:53
+
+ProcessInfo:
+
+progress;0
+pid;2016-09-30_15:30_3755
+sessionid;
+status;
+pwd;/home/marc/src/mRc_repo/shinyTools/tmp
+ifof;/home/marc/src/mRc_repo/shinyTools/tmp/process-ifof.rds
+Rscript;/home/marc/src/mRc_repo/shinyTools/scripts/process.R
+logFile;/home/marc/src/mRc_repo/shinyTools/log/log.log
+statusFile;/home/marc/src/mRc_repo/shinyTools/tmp/process-ifof.status
+
+Input is
+10
+
+Progress update to 0.4
+
+
+########################################
+Starting at 2016-09-30 15:32:06
+
+ProcessInfo:
+
+progress;0.4
+pid;2016-09-30_15:30_3755
+sessionid;
+status;
+pwd;/home/marc/src/mRc_repo/shinyTools/tmp
+ifof;/home/marc/src/mRc_repo/shinyTools/tmp/process-ifof.rds
+Rscript;/home/marc/src/mRc_repo/shinyTools/scripts/process.R
+logFile;/home/marc/src/mRc_repo/shinyTools/log/log.log
+statusFile;tmp/process-ifof.status
