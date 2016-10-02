@@ -1,5 +1,4 @@
-#' RProcessStartUI
-#'
+#' RProcessFinishUI
 #' UI part of a start module for R batch processes. The UI is only an error message which appears only if an error happened.
 #'
 #' This is a process starter for R batch processes which are started from the shiny session, but should run in the background.
@@ -20,14 +19,14 @@
 #'
 #' @export
 #'
-RProcessStartUI <- function(id) {
+RProcessFinishUI <- function(id) {
   ns <- NS(id)
-  return(uiOutput(ns("errorMessage_start")))
+  return(uiOutput(ns("errorMessage_fin")))
 }
 
 
 
-#' RProcessStart
+#' RProcessFinish
 #'
 #' This is a process starter for R batch processes which are started from the shiny session, but should run in the background.
 #' This is useful for things that take a while to compute. The app stays responsive while the batch process is running.
@@ -69,48 +68,41 @@ RProcessStartUI <- function(id) {
 #'
 #' @export
 #'
-RProcessStart <- function(input, output, session, trigger, object, script,
-                          logFile = NULL, sessionid = NULL, pwd = getwd(),
-                          checkFun = NULL, addArgs = NULL) {
-
-  # checks
-  if(!is.null(logFile) && class(logFile) != "character") stop("Argument logFile must be NULL or chr with path of desired log file")
-  if(length(sessionid) > 1) stop("Argument sessionid must be NULL or length 1")
-  if(!is.null(checkFun) && class(checkFun) != "character") stop("Argument checkFun must be a chr or NULL")
-  if(!is.null(addArgs) && class(addArgs) != "list") stop("Argument addArgs must be a list or NULL")
-
+RProcessFinish <- function( input, output, session, pwd = getwd(), millis = 1000 )
+{
   # some constants
-  command <- "Rscript"
-  id <- session$ns("ifof")
-  logFile <- normalizePath(logFile)
-  script <- normalizePath(script)
+  id <- session$ns("")
   pwd <- normalizePath(pwd)
 
   # errors
   error <- reactiveValues(text = NULL)
 
-  # process starter
-  observeEvent(trigger(), {
-    pid <- paste0(format(Sys.time(), "%Y-%m-%d_%H:%M_"), paste(sample(0:9, 4, replace = TRUE), collapse = ""))
+  # read status file
+  status <- reactiveFileReader(millis, session, file.path(pwd, paste0(id, "ifof.status")),
+                               function(x) if(file.exists(x)) ReadInfo(x) else NULL)
 
-    # check function
-    if(!is.null(checkFun)){
-      error$text <- do.call(checkFun, args = list(object(), addArgs))
-      if(!is.null(error$text)) return(NULL)
+  # read results file
+  result <- eventReactive(status(), {
+    error$text <- NULL
+    out <- list(finished = NULL, result = NULL, error = NULL, progress = NULL)
+    if( !is.null(status()) ){
+      out$progress <- status()$progress
+      if( status()$progress == "1" ){
+        out$finished <- Sys.time()
+        if( is.null(status()$status) ){
+          out$result <- readRDS(file.path(pwd, paste0(id, "ifof.rds")))
+        } else {
+          out$error <- status()$status
+          error$text <- status()$status
+        }
+      }
     }
-
-    # write ifof files
-    saveRDS(object(), file.path(pwd, paste0(id, ".rds")))
-    info <- c(paste0("progress;", 0), paste0("pid;", pid), paste0("sessionid;", sessionid),
-              "status", paste0("pwd;", pwd), paste0("ifof;", file.path(pwd, paste0(id, ".rds"))),
-              paste0(command, ";", script), paste0("logFile;", logFile))
-    write(info, file.path(pwd, paste0(id, ".status")))
-
-    system2(command, args = c(script, file.path(pwd, paste0(id, ".status"))), wait = FALSE, stdout = NULL, stderr = NULL)
+    out
   })
 
   # show error message
-  output$errorMessage_start <- renderUI(HTML(paste0("<div style='color:red'>", error$text, "</div>")))
+  output$errorMessage_fin <- renderUI(HTML(paste0("<div style='color:red'>", error$text, "</div>")))
 
-  return(NULL)
+  return(result)
 }
+

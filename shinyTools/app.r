@@ -1,5 +1,7 @@
 library(shinyTools)
 
+source("R/RProcessFinish.R")
+
 # some function as example
 check <- function(object, add){ if(object <= add$n) return(paste("Lambda must be greater", add$n, "idiot!"))}
 
@@ -12,7 +14,7 @@ ui <- fluidPage(sidebarLayout(
     actionButton("trigger", "Start"),
     helpText("Plot is created in R batch script with 4s delay.")
   ),
-  mainPanel(h2("Plot Output"), plotOutput("res1"), verbatimTextOutput("res2"))
+  mainPanel(h2("Plot Output"), RProcessFinishUI("process"), plotOutput("plot"), verbatimTextOutput("result"))
 ))
 
 server <-function(input, output, session) {
@@ -21,25 +23,10 @@ server <-function(input, output, session) {
              script = "./scripts/process.R", logFile = "./log/log.log", pwd = "./tmp",
              checkFun = "check", addArgs = list(n = 0))
 
-  id <- "process"
-  pwd <- "./tmp"
+  result <- callModule(RProcessFinish, "process", pwd = "./tmp")
 
-  id <- paste0(id, "-ifof")
-  pwd <- normalizePath(pwd)
-
-  status <- reactiveFileReader(500, session, file.path(pwd, paste0(id, ".status")),
-                               function(x) if(file.exists(x)) ReadInfo(x) else NULL)
-
-  res1 <- eventReactive(status(), {
-    if(is.null(status()) || status()$progress != "1") NULL else {
-      out <- readRDS(file.path(pwd, paste0(id, ".rds")))
-      out
-    }
-  })
-
-
-  output$res1 <- renderPlot(res1())
-  output$res2 <- renderPrint(status())
+  output$result <- renderPrint(result())
+  output$plot <- renderPlot(plot(1:100, result()$result))
 }
 
 shinyApp(ui, server)
