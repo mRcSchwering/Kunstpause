@@ -31,8 +31,10 @@ that no files are falsly overwritten.
 
 }
 \seealso{
-Other RProcess module functions: \code{\link{Fin}},
-  \code{\link{Init}}, \code{\link{Log}},
+Other RProcess module functions: \code{\link{Abort}},
+  \code{\link{Fin}}, \code{\link{Init}}, \code{\link{Log}},
+  \code{\link{RProcessFinishUI}},
+  \code{\link{RProcessFinish}},
   \code{\link{RProcessStartUI}},
   \code{\link{RProcessStart}}, \code{\link{Try}},
   \code{\link{Up}}

@@ -4,16 +4,19 @@ input <- shinyTools::Init(commandArgs(TRUE))
 
 # Log sth
 shinyTools::Log(c("Input is", input))
+Sys.sleep(2)
+# some quality check
+if(input > 100) shinyTools::Abort("Input greater 100")
 
 # status update to shiny session
 info <- shinyTools::Up(0.8)
 
 # do stuff
 Sys.sleep(4)
-a <- shinyTools::Try(dpois(1:100, input))
+res <- shinyTools::Try(dpois(1:100, input))
 
 # finish return result to shiny session
-shinyTools::Fin(a)
+shinyTools::Fin(res)
 
 
 

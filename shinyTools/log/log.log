@@ -1,1496 +1,171 @@
-
-
-########################################
-Starting at 2016-09-28 19:35:01
-
-ProcessInfo:
-
-progress;0
-pid;2016-09-28_19:35_4920
-sessionid;
-status;
-pwd;/home/marc/src/mRc_repo/shinyTools/tmp
-ifof;/home/marc/src/mRc_repo/shinyTools/tmp/process-ifof.rds
-Rscript;/home/marc/src/mRc_repo/shinyTools/scripts/process.R
-logFile;/home/marc/src/mRc_repo/shinyTools/log/log.log
-statusFile;/home/marc/src/mRc_repo/shinyTools/tmp/process-ifof.status
-
-Progress update to 0.2
-
-Input is
-5
-
-Expression:
-sum(a + 2)
-returned error:
-Error in a + 2 : non-numeric argument to binary operator
-
-Error is ignored
-
-Process finishes at 2016-09-28 19:35:05
-
-
-########################################
-Starting at 2016-09-28 20:09:53
-
-ProcessInfo:
-
-progress;0
-pid;2016-09-28_20:09_0369
-sessionid;
-status;
-pwd;/home/marc/src/mRc_repo/shinyTools/tmp
-ifof;/home/marc/src/mRc_repo/shinyTools/tmp/process-ifof.rds
-Rscript;/home/marc/src/mRc_repo/shinyTools/scripts/process.R
-logFile;/home/marc/src/mRc_repo/shinyTools/log/log.log
-statusFile;/home/marc/src/mRc_repo/shinyTools/tmp/process-ifof.status
-
-Input is
-5
-
-Progress update to 0.2
-
-Process finishes at 2016-09-28 20:09:57
-
-
-########################################
-Starting at 2016-09-28 20:16:34
-
-ProcessInfo:
-
-progress;0
-pid;2016-09-28_20:16_3180
-sessionid;
-status;
-pwd;./tmp
-ifof;./tmp/process-ifof.rds
-Rscript;./scripts/process.R
-logFile;./log/log.log
-statusFile;./tmp/process-ifof.status
-
-
-########################################
-Starting at 2016-09-28 20:21:20
-
-ProcessInfo:
-
-progress;0
-pid;2016-09-28_20:21_2335
-sessionid;
-status;
-pwd;/home/marc/src/mRc_repo/shinyTools/tmp
-ifof;/home/marc/src/mRc_repo/shinyTools/tmp/process-ifof.rds
-Rscript;/home/marc/src/mRc_repo/shinyTools/scripts/process.R
-logFile;/home/marc/src/mRc_repo/shinyTools/log/log.log
-statusFile;/home/marc/src/mRc_repo/shinyTools/tmp/process-ifof.status
-
-Input is
-2
-
-Progress update to 0.2
-
-Process finishes at 2016-09-28 20:21:24
-
-
-########################################
-Starting at 2016-09-28 20:22:30
-
-ProcessInfo:
-
-progress;0
-pid;2016-09-28_20:22_7668
-sessionid;
-status;
-pwd;/home/marc/src/mRc_repo/shinyTools/tmp
-ifof;/home/marc/src/mRc_repo/shinyTools/tmp/process-ifof.rds
-Rscript;/home/marc/src/mRc_repo/shinyTools/scripts/process.R
-logFile;/home/marc/src/mRc_repo/shinyTools/log/log.log
-statusFile;/home/marc/src/mRc_repo/shinyTools/tmp/process-ifof.status
-
-Input is
-2
-
-Progress update to 0.2
-
-Process finishes at 2016-09-28 20:22:34
-
-
-########################################
-Starting at 2016-09-28 20:43:26
-
-ProcessInfo:
-
-progress;0
-pid;2016-09-28_20:43_7470
-sessionid;
-status;
-pwd;/home/marc/src/mRc_repo/shinyTools/tmp
-ifof;/home/marc/src/mRc_repo/shinyTools/tmp/process-ifof.rds
-Rscript;/home/marc/src/mRc_repo/shinyTools/scripts/process.R
-logFile;/home/marc/src/mRc_repo/shinyTools/log/log.log
-statusFile;/home/marc/src/mRc_repo/shinyTools/tmp/process-ifof.status
-
-Input is
-0
-
-Progress update to 0.2
-
-
-########################################
-Starting at 2016-09-30 14:30:30
-
-ProcessInfo:
-
-progress;0
-pid;2016-09-30_14:30_6139
-sessionid;
-status;
-pwd;/home/marc/src/mRc_repo/shinyTools/tmp
-ifof;/home/marc/src/mRc_repo/shinyTools/tmp/process-ifof.rds
-Rscript;/home/marc/src/mRc_repo/shinyTools/scripts/process.R
-logFile;/home/marc/src/mRc_repo/shinyTools/log/log.log
-statusFile;/home/marc/src/mRc_repo/shinyTools/tmp/process-ifof.status
-
-Input is
-10
-
-Progress update to 0.2
-
-
-########################################
-Starting at 2016-09-30 14:31:35
-
-ProcessInfo:
-
-progress;0
-pid;2016-09-30_14:31_4158
-sessionid;
-status;
-pwd;/home/marc/src/mRc_repo/shinyTools/tmp
-ifof;/home/marc/src/mRc_repo/shinyTools/tmp/process-ifof.rds
-Rscript;/home/marc/src/mRc_repo/shinyTools/scripts/process.R
-logFile;/home/marc/src/mRc_repo/shinyTools/log/log.log
-statusFile;/home/marc/src/mRc_repo/shinyTools/tmp/process-ifof.status
-
-Input is
-10
-
-Progress update to 0.2
-
-
-########################################
-Starting at 2016-09-30 14:32:01
-
-ProcessInfo:
-
-progress;0
-pid;2016-09-30_14:32_5420
-sessionid;
-status;
-pwd;/home/marc/src/mRc_repo/shinyTools/tmp
-ifof;/home/marc/src/mRc_repo/shinyTools/tmp/process-ifof.rds
-Rscript;/home/marc/src/mRc_repo/shinyTools/scripts/process.R
-logFile;/home/marc/src/mRc_repo/shinyTools/log/log.log
-statusFile;/home/marc/src/mRc_repo/shinyTools/tmp/process-ifof.status
-
-Input is
-10
-
-Progress update to 0.2
-
-
-########################################
-Starting at 2016-09-30 14:32:40
-
-ProcessInfo:
-
-progress;0
-pid;2016-09-30_14:32_9389
-sessionid;
-status;
-pwd;/home/marc/src/mRc_repo/shinyTools/tmp
-ifof;/home/marc/src/mRc_repo/shinyTools/tmp/process-ifof.rds
-Rscript;/home/marc/src/mRc_repo/shinyTools/scripts/process.R
-logFile;/home/marc/src/mRc_repo/shinyTools/log/log.log
-statusFile;/home/marc/src/mRc_repo/shinyTools/tmp/process-ifof.status
-
-Input is
-10
-
-Progress update to 0.2
-
-Expression:
-1 + "asd"
-returned error:
-Error in 1 + "asd" : non-numeric argument to binary operator
-
-Error is ignored
-
-Process finishes at 2016-09-30 14:32:44
-
-
-########################################
-Starting at 2016-09-30 14:33:53
-
-ProcessInfo:
-
-progress;0
-pid;2016-09-30_14:33_2807
-sessionid;
-status;
-pwd;/home/marc/src/mRc_repo/shinyTools/tmp
-ifof;/home/marc/src/mRc_repo/shinyTools/tmp/process-ifof.rds
-Rscript;/home/marc/src/mRc_repo/shinyTools/scripts/process.R
-logFile;/home/marc/src/mRc_repo/shinyTools/log/log.log
-statusFile;/home/marc/src/mRc_repo/shinyTools/tmp/process-ifof.status
-
-Input is
-6
-
-Progress update to 0.4
-
-Progress update to 0.7
-
-Expression:
-1 + "asd"
-returned error:
-Error in 1 + "asd" : non-numeric argument to binary operator
-
-Error is ignored
-
-Process finishes at 2016-09-30 14:34:02
-
-
-########################################
-Starting at 2016-09-30 14:34:34
-
-ProcessInfo:
-
-progress;0
-pid;2016-09-30_14:34_2972
-sessionid;
-status;
-pwd;/home/marc/src/mRc_repo/shinyTools/tmp
-ifof;/home/marc/src/mRc_repo/shinyTools/tmp/process-ifof.rds
-Rscript;/home/marc/src/mRc_repo/shinyTools/scripts/process.R
-logFile;/home/marc/src/mRc_repo/shinyTools/log/log.log
-statusFile;/home/marc/src/mRc_repo/shinyTools/tmp/process-ifof.status
-
-Input is
-6
-
-Progress update to 0.4
-
-Progress update to 0.7
-
-Expression:
-1 + "asd"
-returned error:
-Error in 1 + "asd" : non-numeric argument to binary operator
-
-Error is ignored
-
-Process finishes at 2016-09-30 14:34:42
-
-
-########################################
-Starting at 2016-09-30 14:36:14
-
-ProcessInfo:
-
-progress;0
-pid;2016-09-30_14:36_0119
-sessionid;
-status;
-pwd;/home/marc/src/mRc_repo/shinyTools/tmp
-ifof;/home/marc/src/mRc_repo/shinyTools/tmp/process-ifof.rds
-Rscript;/home/marc/src/mRc_repo/shinyTools/scripts/process.R
-logFile;/home/marc/src/mRc_repo/shinyTools/log/log.log
-statusFile;/home/marc/src/mRc_repo/shinyTools/tmp/process-ifof.status
-
-Input is
-10
-
-Progress update to 0.4
-
-Progress update to 0.7
-
-Expression:
-1 + "asd"
-returned error:
-Error in 1 + "asd" : non-numeric argument to binary operator
-
-Error is ignored
-
-Process finishes at 2016-09-30 14:36:22
-
-
-########################################
-Starting at 2016-09-30 14:44:02
-
-ProcessInfo:
-
-progress;0
-pid;2016-09-30_14:44_1604
-sessionid;
-status;
-pwd;/home/marc/src/mRc_repo/shinyTools/tmp
-ifof;/home/marc/src/mRc_repo/shinyTools/tmp/process-ifof.rds
-Rscript;/home/marc/src/mRc_repo/shinyTools/scripts/process.R
-logFile;/home/marc/src/mRc_repo/shinyTools/log/log.log
-statusFile;/home/marc/src/mRc_repo/shinyTools/tmp/process-ifof.status
-
-Input is
-10
-
-Progress update to 0.4
-
-Progress update to 0.7
-
-Expression:
-1 + "asd"
-returned error:
-Error in 1 + "asd" : non-numeric argument to binary operator
-
-Error is ignored
-
-Process finishes at 2016-09-30 14:44:11
-
-
-########################################
-Starting at 2016-09-30 14:44:38
-
-ProcessInfo:
-
-progress;0
-pid;2016-09-30_14:44_8621
-sessionid;
-status;
-pwd;/home/marc/src/mRc_repo/shinyTools/tmp
-ifof;/home/marc/src/mRc_repo/shinyTools/tmp/process-ifof.rds
-Rscript;/home/marc/src/mRc_repo/shinyTools/scripts/process.R
-logFile;/home/marc/src/mRc_repo/shinyTools/log/log.log
-statusFile;/home/marc/src/mRc_repo/shinyTools/tmp/process-ifof.status
-
-Input is
-10
-
-Progress update to 0.4
-
-Progress update to 0.7
-
-Expression:
-1 + "asd"
-returned error:
-Error in 1 + "asd" : non-numeric argument to binary operator
-
-Error is ignored
-
-Process finishes at 2016-09-30 14:44:46
-
-
-########################################
-Starting at 2016-09-30 14:45:29
-
-ProcessInfo:
-
-progress;0
-pid;2016-09-30_14:45_2093
-sessionid;
-status;
-pwd;/home/marc/src/mRc_repo/shinyTools/tmp
-ifof;/home/marc/src/mRc_repo/shinyTools/tmp/process-ifof.rds
-Rscript;/home/marc/src/mRc_repo/shinyTools/scripts/process.R
-logFile;/home/marc/src/mRc_repo/shinyTools/log/log.log
-statusFile;/home/marc/src/mRc_repo/shinyTools/tmp/process-ifof.status
-
-Input is
-10
-
-Progress update to 0.4
-
-Progress update to 0.7
-
-Expression:
-1 + "asd"
-returned error:
-Error in 1 + "asd" : non-numeric argument to binary operator
-
-Error is ignored
-
-Process finishes at 2016-09-30 14:45:38
-
-
-########################################
-Starting at 2016-09-30 14:46:59
-
-ProcessInfo:
-
-progress;0
-pid;2016-09-30_14:46_3260
-sessionid;
-status;
-pwd;/home/marc/src/mRc_repo/shinyTools/tmp
-ifof;/home/marc/src/mRc_repo/shinyTools/tmp/process-ifof.rds
-Rscript;/home/marc/src/mRc_repo/shinyTools/scripts/process.R
-logFile;/home/marc/src/mRc_repo/shinyTools/log/log.log
-statusFile;/home/marc/src/mRc_repo/shinyTools/tmp/process-ifof.status
-
-Input is
-10
-
-Progress update to 0.4
-
-Progress update to 0.7
-
-Expression:
-1 + "asd"
-returned error:
-Error in 1 + "asd" : non-numeric argument to binary operator
-
-Error is ignored
-
-Process finishes at 2016-09-30 14:47:07
-
-
-########################################
-Starting at 2016-09-30 14:47:41
-
-ProcessInfo:
-
-progress;0
-pid;2016-09-30_14:47_8010
-sessionid;
-status;
-pwd;/home/marc/src/mRc_repo/shinyTools/tmp
-ifof;/home/marc/src/mRc_repo/shinyTools/tmp/process-ifof.rds
-Rscript;/home/marc/src/mRc_repo/shinyTools/scripts/process.R
-logFile;/home/marc/src/mRc_repo/shinyTools/log/log.log
-statusFile;/home/marc/src/mRc_repo/shinyTools/tmp/process-ifof.status
-
-Input is
-10
-
-Progress update to 0.4
-
-Progress update to 0.7
-
-Expression:
-1 + "asd"
-returned error:
-Error in 1 + "asd" : non-numeric argument to binary operator
-
-Error is ignored
-
-Process finishes at 2016-09-30 14:47:49
-
-
-########################################
-Starting at 2016-09-30 14:50:24
-
-ProcessInfo:
-
-progress;0
-pid;2016-09-30_14:50_9285
-sessionid;
-status;
-pwd;/home/marc/src/mRc_repo/shinyTools/tmp
-ifof;/home/marc/src/mRc_repo/shinyTools/tmp/process-ifof.rds
-Rscript;/home/marc/src/mRc_repo/shinyTools/scripts/process.R
-logFile;/home/marc/src/mRc_repo/shinyTools/log/log.log
-statusFile;/home/marc/src/mRc_repo/shinyTools/tmp/process-ifof.status
-
-Input is
-10
-
-Progress update to 0.4
-
-Progress update to 0.7
-
-Expression:
-1 + "asd"
-returned error:
-Error in 1 + "asd" : non-numeric argument to binary operator
-
-Error is ignored
-
-Process finishes at 2016-09-30 14:50:32
-
-
-########################################
-Starting at 2016-09-30 14:55:21
-
-ProcessInfo:
-
-progress;0
-pid;2016-09-30_14:55_4783
-sessionid;
-status;
-pwd;/home/marc/src/mRc_repo/shinyTools/tmp
-ifof;/home/marc/src/mRc_repo/shinyTools/tmp/process-ifof.rds
-Rscript;/home/marc/src/mRc_repo/shinyTools/scripts/process.R
-logFile;/home/marc/src/mRc_repo/shinyTools/log/log.log
-statusFile;/home/marc/src/mRc_repo/shinyTools/tmp/process-ifof.status
-
-Input is
-10
-
-Progress update to 0.4
-
-Progress update to 0.7
-
-Expression:
-1 + "asd"
-returned error:
-Error in 1 + "asd" : non-numeric argument to binary operator
-
-Error is ignored
-
-Process finishes at 2016-09-30 14:55:29
-
-
-########################################
-Starting at 2016-09-30 14:58:23
-
-ProcessInfo:
-
-progress;1
-pid;2016-09-30_14:55_4783
-sessionid;
-status;
-pwd;/home/marc/src/mRc_repo/shinyTools/tmp
-ifof;/home/marc/src/mRc_repo/shinyTools/tmp/process-ifof.rds
-Rscript;/home/marc/src/mRc_repo/shinyTools/scripts/process.R
-logFile;/home/marc/src/mRc_repo/shinyTools/log/log.log
-statusFile;tmp/process-ifof.status
-
-
-########################################
-Starting at 2016-09-30 15:05:09
-
-ProcessInfo:
-
-progress;0
-pid;2016-09-30_15:05_4790
-sessionid;
-status;
-pwd;/home/marc/src/mRc_repo/shinyTools/tmp
-ifof;/home/marc/src/mRc_repo/shinyTools/tmp/process-ifof.rds
-Rscript;/home/marc/src/mRc_repo/shinyTools/scripts/process.R
-logFile;/home/marc/src/mRc_repo/shinyTools/log/log.log
-statusFile;/home/marc/src/mRc_repo/shinyTools/tmp/process-ifof.status
-
-Input is
-10
-
-Progress update to 0.4
-
-Progress update to 0.7
-
-Process finishes at 2016-09-30 15:05:17
-
-
-########################################
-Starting at 2016-09-30 15:06:08
-
-ProcessInfo:
-
-progress;0
-pid;2016-09-30_15:06_8733
-sessionid;
-status;
-pwd;/home/marc/src/mRc_repo/shinyTools/tmp
-ifof;/home/marc/src/mRc_repo/shinyTools/tmp/process-ifof.rds
-Rscript;/home/marc/src/mRc_repo/shinyTools/scripts/process.R
-logFile;/home/marc/src/mRc_repo/shinyTools/log/log.log
-statusFile;/home/marc/src/mRc_repo/shinyTools/tmp/process-ifof.status
-
-Input is
-10
-
-Progress update to 0.4
-
-Progress update to 0.7
-
-Process finishes at 2016-09-30 15:06:16
-
-
-########################################
-Starting at 2016-09-30 15:07:20
-
-ProcessInfo:
-
-progress;0
-pid;2016-09-30_15:07_0750
-sessionid;
-status;
-pwd;/home/marc/src/mRc_repo/shinyTools/tmp
-ifof;/home/marc/src/mRc_repo/shinyTools/tmp/process-ifof.rds
-Rscript;/home/marc/src/mRc_repo/shinyTools/scripts/process.R
-logFile;/home/marc/src/mRc_repo/shinyTools/log/log.log
-statusFile;/home/marc/src/mRc_repo/shinyTools/tmp/process-ifof.status
-
-
-########################################
-Starting at 2016-09-30 15:08:28
-
-ProcessInfo:
-
-progress;0.1
-pid;2016-09-30_15:07_0750
-sessionid;
-status;
-pwd;/home/marc/src/mRc_repo/shinyTools/tmp
-ifof;/home/marc/src/mRc_repo/shinyTools/tmp/process-ifof.rds
-Rscript;/home/marc/src/mRc_repo/shinyTools/scripts/process.R
-logFile;/home/marc/src/mRc_repo/shinyTools/log/log.log
-statusFile;tmp/process-ifof.status
-
-
-########################################
-Starting at 2016-09-30 15:30:53
-
-ProcessInfo:
-
-progress;0
-pid;2016-09-30_15:30_3755
-sessionid;
-status;
-pwd;/home/marc/src/mRc_repo/shinyTools/tmp
-ifof;/home/marc/src/mRc_repo/shinyTools/tmp/process-ifof.rds
-Rscript;/home/marc/src/mRc_repo/shinyTools/scripts/process.R
-logFile;/home/marc/src/mRc_repo/shinyTools/log/log.log
-statusFile;/home/marc/src/mRc_repo/shinyTools/tmp/process-ifof.status
-
-Input is
-10
-
-Progress update to 0.4
-
-
-########################################
-Starting at 2016-09-30 15:32:06
-
-ProcessInfo:
-
-progress;0.4
-pid;2016-09-30_15:30_3755
-sessionid;
-status;
-pwd;/home/marc/src/mRc_repo/shinyTools/tmp
-ifof;/home/marc/src/mRc_repo/shinyTools/tmp/process-ifof.rds
-Rscript;/home/marc/src/mRc_repo/shinyTools/scripts/process.R
-logFile;/home/marc/src/mRc_repo/shinyTools/log/log.log
-statusFile;tmp/process-ifof.status
-
-
-########################################
-Starting at 2016-10-02 17:56:49
-
-ProcessInfo:
-
-progress;0
-pid;2016-10-02_17:56_3395
-sessionid;
-status;
-pwd;/home/marc/src/mRc_repo/shinyTools/tmp
-ifof;/home/marc/src/mRc_repo/shinyTools/tmp/process-ifof.rds
-Rscript;/home/marc/src/mRc_repo/shinyTools/scripts/process.R
-logFile;/home/marc/src/mRc_repo/shinyTools/log/log.log
-statusFile;/home/marc/src/mRc_repo/shinyTools/tmp/process-ifof.status
-
-Input is
-10
-
-Progress update to 0.8
-
-Process finishes at 2016-10-02 17:56:53
-
-
-########################################
-Starting at 2016-10-02 17:57:05
-
-ProcessInfo:
-
-progress;0
-pid;2016-10-02_17:57_2190
-sessionid;
-status;
-pwd;/home/marc/src/mRc_repo/shinyTools/tmp
-ifof;/home/marc/src/mRc_repo/shinyTools/tmp/process-ifof.rds
-Rscript;/home/marc/src/mRc_repo/shinyTools/scripts/process.R
-logFile;/home/marc/src/mRc_repo/shinyTools/log/log.log
-statusFile;/home/marc/src/mRc_repo/shinyTools/tmp/process-ifof.status
-
-Input is
-20
-
-Progress update to 0.8
-
-Process finishes at 2016-10-02 17:57:09
-
-
-########################################
-Starting at 2016-10-02 17:57:16
-
-ProcessInfo:
-
-progress;0
-pid;2016-10-02_17:57_7617
-sessionid;
-status;
-pwd;/home/marc/src/mRc_repo/shinyTools/tmp
-ifof;/home/marc/src/mRc_repo/shinyTools/tmp/process-ifof.rds
-Rscript;/home/marc/src/mRc_repo/shinyTools/scripts/process.R
-logFile;/home/marc/src/mRc_repo/shinyTools/log/log.log
-statusFile;/home/marc/src/mRc_repo/shinyTools/tmp/process-ifof.status
-
-Input is
-20
-
-Progress update to 0.8
-
-Process finishes at 2016-10-02 17:57:21
-
-
-########################################
-Starting at 2016-10-02 17:59:09
-
-ProcessInfo:
-
-progress;0
-pid;2016-10-02_17:59_0014
-sessionid;
-status;
-pwd;/home/marc/src/mRc_repo/shinyTools/tmp
-ifof;/home/marc/src/mRc_repo/shinyTools/tmp/process-ifof.rds
-Rscript;/home/marc/src/mRc_repo/shinyTools/scripts/process.R
-logFile;/home/marc/src/mRc_repo/shinyTools/log/log.log
-statusFile;/home/marc/src/mRc_repo/shinyTools/tmp/process-ifof.status
-
-Input is
-10
-
-Progress update to 0.8
-
-Process finishes at 2016-10-02 17:59:13
-
-
-########################################
-Starting at 2016-10-02 18:07:43
-
-ProcessInfo:
-
-progress;0
-pid;2016-10-02_18:07_3426
-sessionid;
-status;
-pwd;/home/marc/src/mRc_repo/shinyTools/tmp
-ifof;/home/marc/src/mRc_repo/shinyTools/tmp/process-ifof.rds
-Rscript;/home/marc/src/mRc_repo/shinyTools/scripts/process.R
-logFile;/home/marc/src/mRc_repo/shinyTools/log/log.log
-statusFile;/home/marc/src/mRc_repo/shinyTools/tmp/process-ifof.status
-
-Input is
-10
-
-Progress update to 0.8
-
-Process finishes at 2016-10-02 18:07:47
-
-
-########################################
-Starting at 2016-10-02 18:08:07
-
-ProcessInfo:
-
-progress;0
-pid;2016-10-02_18:08_0026
-sessionid;
-status;
-pwd;/home/marc/src/mRc_repo/shinyTools/tmp
-ifof;/home/marc/src/mRc_repo/shinyTools/tmp/process-ifof.rds
-Rscript;/home/marc/src/mRc_repo/shinyTools/scripts/process.R
-logFile;/home/marc/src/mRc_repo/shinyTools/log/log.log
-statusFile;/home/marc/src/mRc_repo/shinyTools/tmp/process-ifof.status
-
-Input is
-10
-
-Progress update to 0.8
-
-Process finishes at 2016-10-02 18:08:11
-
-
-########################################
-Starting at 2016-10-02 18:08:18
-
-ProcessInfo:
-
-progress;0
-pid;2016-10-02_18:08_7594
-sessionid;
-status;
-pwd;/home/marc/src/mRc_repo/shinyTools/tmp
-ifof;/home/marc/src/mRc_repo/shinyTools/tmp/process-ifof.rds
-Rscript;/home/marc/src/mRc_repo/shinyTools/scripts/process.R
-logFile;/home/marc/src/mRc_repo/shinyTools/log/log.log
-statusFile;/home/marc/src/mRc_repo/shinyTools/tmp/process-ifof.status
-
-Input is
-100
-
-Progress update to 0.8
-
-Process finishes at 2016-10-02 18:08:22
-
-
-########################################
-Starting at 2016-10-02 18:09:05
-
-ProcessInfo:
-
-progress;0
-pid;2016-10-02_18:09_8232
-sessionid;
-status;
-pwd;/home/marc/src/mRc_repo/shinyTools/tmp
-ifof;/home/marc/src/mRc_repo/shinyTools/tmp/process-ifof.rds
-Rscript;/home/marc/src/mRc_repo/shinyTools/scripts/process.R
-logFile;/home/marc/src/mRc_repo/shinyTools/log/log.log
-statusFile;/home/marc/src/mRc_repo/shinyTools/tmp/process-ifof.status
-
-Input is
-10
-
-Progress update to 0.8
-
-Expression:
-asddpois(1:100, input)
-returned error:
-Error in eval(expr, envir, enclos) : could not find function "asddpois"
-
-Quitting at 2016-10-02 18:09:09
-
-
-########################################
-Starting at 2016-10-02 18:15:26
-
-ProcessInfo:
-
-progress;0
-pid;2016-10-02_18:15_9842
-sessionid;
-status;
-pwd;/home/marc/src/mRc_repo/shinyTools/tmp
-ifof;/home/marc/src/mRc_repo/shinyTools/tmp/process-ifof.rds
-Rscript;/home/marc/src/mRc_repo/shinyTools/scripts/process.R
-logFile;/home/marc/src/mRc_repo/shinyTools/log/log.log
-statusFile;/home/marc/src/mRc_repo/shinyTools/tmp/process-ifof.status
-
-Input is
-10
-
-Progress update to 0.8
-
-Expression:
-asddpois(1:100, input)
-returned error:
-Error in eval(expr, envir, enclos) : could not find function "asddpois"
-
-Quitting at 2016-10-02 18:15:30
-
-
-########################################
-Starting at 2016-10-02 18:15:38
-
-ProcessInfo:
-
-progress;0
-pid;2016-10-02_18:15_3682
-sessionid;
-status;
-pwd;/home/marc/src/mRc_repo/shinyTools/tmp
-ifof;/home/marc/src/mRc_repo/shinyTools/tmp/process-ifof.rds
-Rscript;/home/marc/src/mRc_repo/shinyTools/scripts/process.R
-logFile;/home/marc/src/mRc_repo/shinyTools/log/log.log
-statusFile;/home/marc/src/mRc_repo/shinyTools/tmp/process-ifof.status
-
-Input is
-10
-
-Progress update to 0.8
-
-Process finishes at 2016-10-02 18:15:42
-
-
-########################################
-Starting at 2016-10-02 18:17:12
-
-ProcessInfo:
-
-progress;0
-pid;2016-10-02_18:17_7685
-sessionid;
-status;
-pwd;/home/marc/src/mRc_repo/shinyTools/tmp
-ifof;/home/marc/src/mRc_repo/shinyTools/tmp/process-ifof.rds
-Rscript;/home/marc/src/mRc_repo/shinyTools/scripts/process.R
-logFile;/home/marc/src/mRc_repo/shinyTools/log/log.log
-statusFile;/home/marc/src/mRc_repo/shinyTools/tmp/process-ifof.status
-
-Input is
-10
-
-Progress update to 0.8
-
-Process finishes at 2016-10-02 18:17:16
-
-
-########################################
-Starting at 2016-10-02 18:17:19
-
-ProcessInfo:
-
-progress;0
-pid;2016-10-02_18:17_9306
-sessionid;
-status;
-pwd;/home/marc/src/mRc_repo/shinyTools/tmp
-ifof;/home/marc/src/mRc_repo/shinyTools/tmp/process-ifof.rds
-Rscript;/home/marc/src/mRc_repo/shinyTools/scripts/process.R
-logFile;/home/marc/src/mRc_repo/shinyTools/log/log.log
-statusFile;/home/marc/src/mRc_repo/shinyTools/tmp/process-ifof.status
-
-Input is
-10
-
-Progress update to 0.8
-
-Expression:
-asddpois(1:100, input)
-returned error:
-Error in eval(expr, envir, enclos) : could not find function "asddpois"
-
-Quitting at 2016-10-02 18:17:23
-
-
-########################################
-Starting at 2016-10-02 18:17:38
-
-ProcessInfo:
-
-progress;0
-pid;2016-10-02_18:17_7816
-sessionid;
-status;
-pwd;/home/marc/src/mRc_repo/shinyTools/tmp
-ifof;/home/marc/src/mRc_repo/shinyTools/tmp/process-ifof.rds
-Rscript;/home/marc/src/mRc_repo/shinyTools/scripts/process.R
-logFile;/home/marc/src/mRc_repo/shinyTools/log/log.log
-statusFile;/home/marc/src/mRc_repo/shinyTools/tmp/process-ifof.status
-
-Input is
-10
-
-Progress update to 0.8
-
-Process finishes at 2016-10-02 18:17:42
-
-
-########################################
-Starting at 2016-10-02 18:40:02
-
-ProcessInfo:
-
-progress;0
-pid;2016-10-02_18:40_7971
-sessionid;
-status;
-pwd;/home/marc/src/mRc_repo/shinyTools/tmp
-ifof;/home/marc/src/mRc_repo/shinyTools/tmp/process-ifof.rds
-Rscript;/home/marc/src/mRc_repo/shinyTools/scripts/process.R
-logFile;/home/marc/src/mRc_repo/shinyTools/log/log.log
-statusFile;/home/marc/src/mRc_repo/shinyTools/tmp/process-ifof.status
-
-Input is
-10
-
-Progress update to 0.8
-
-Process finishes at 2016-10-02 18:40:06
-
-
-########################################
-Starting at 2016-10-02 18:40:59
-
-ProcessInfo:
-
-progress;0
-pid;2016-10-02_18:40_9929
-sessionid;
-status;
-pwd;/home/marc/src/mRc_repo/shinyTools/tmp
-ifof;/home/marc/src/mRc_repo/shinyTools/tmp/process-ifof.rds
-Rscript;/home/marc/src/mRc_repo/shinyTools/scripts/process.R
-logFile;/home/marc/src/mRc_repo/shinyTools/log/log.log
-statusFile;/home/marc/src/mRc_repo/shinyTools/tmp/process-ifof.status
-
-Input is
-10
-
-Progress update to 0.8
-
-Process finishes at 2016-10-02 18:41:03
-
-
-########################################
-Starting at 2016-10-02 18:42:13
-
-ProcessInfo:
-
-progress;0
-pid;2016-10-02_18:42_1232
-sessionid;
-status;
-pwd;/home/marc/src/mRc_repo/shinyTools/tmp
-ifof;/home/marc/src/mRc_repo/shinyTools/tmp/process-ifof.rds
-Rscript;/home/marc/src/mRc_repo/shinyTools/scripts/process.R
-logFile;/home/marc/src/mRc_repo/shinyTools/log/log.log
-statusFile;/home/marc/src/mRc_repo/shinyTools/tmp/process-ifof.status
-
-Input is
-10
-
-Progress update to 0.8
-
-Expression:
-asddpois(1:100, input)
-returned error:
-Error in eval(expr, envir, enclos) : could not find function "asddpois"
-
-Quitting at 2016-10-02 18:42:17
-
-
-########################################
-Starting at 2016-10-02 18:43:44
-
-ProcessInfo:
-
-progress;0
-pid;2016-10-02_18:43_2678
-sessionid;
-status;
-pwd;/home/marc/src/mRc_repo/shinyTools/tmp
-ifof;/home/marc/src/mRc_repo/shinyTools/tmp/process-ifof.rds
-Rscript;/home/marc/src/mRc_repo/shinyTools/scripts/process.R
-logFile;/home/marc/src/mRc_repo/shinyTools/log/log.log
-statusFile;/home/marc/src/mRc_repo/shinyTools/tmp/process-ifof.status
-
-Input is
-10
-
-Progress update to 0.8
-
-Expression:
-asddpois(1:100, input)
-returned error:
-Error in eval(expr, envir, enclos) : could not find function "asddpois"
-
-Quitting at 2016-10-02 18:43:48
-
-
-########################################
-Starting at 2016-10-02 20:51:44
-
-ProcessInfo:
-
-progress;0
-pid;2016-10-02_20:51_4040
-sessionid;
-status;
-pwd;/home/marc/src/mRc_repo/shinyTools/tmp
-ifof;/home/marc/src/mRc_repo/shinyTools/tmp/process-ifof.rds
-Rscript;/home/marc/src/mRc_repo/shinyTools/scripts/process.R
-logFile;/home/marc/src/mRc_repo/shinyTools/log/log.log
-statusFile;/home/marc/src/mRc_repo/shinyTools/tmp/process-ifof.status
-
-Input is
-10
-
-Progress update to 0.8
-
-Process finishes at 2016-10-02 20:51:48
-
-
-########################################
-Starting at 2016-10-02 20:52:08
-
-ProcessInfo:
-
-progress;0
-pid;2016-10-02_20:52_4786
-sessionid;
-status;
-pwd;/home/marc/src/mRc_repo/shinyTools/tmp
-ifof;/home/marc/src/mRc_repo/shinyTools/tmp/process-ifof.rds
-Rscript;/home/marc/src/mRc_repo/shinyTools/scripts/process.R
-logFile;/home/marc/src/mRc_repo/shinyTools/log/log.log
-statusFile;/home/marc/src/mRc_repo/shinyTools/tmp/process-ifof.status
-
-Input is
-10
-
-Progress update to 0.8
-
-Expression:
-asddpois(1:100, input)
-returned error:
-Error in eval(expr, envir, enclos) : could not find function "asddpois"
-
-Quitting at 2016-10-02 20:52:12
-
-
-########################################
-Starting at 2016-10-02 20:55:58
-
-ProcessInfo:
-
-progress;0
-pid;2016-10-02_20:55_7242
-sessionid;
-status;
-pwd;/home/marc/src/mRc_repo/shinyTools/tmp
-ifof;/home/marc/src/mRc_repo/shinyTools/tmp/process-ifof.rds
-Rscript;/home/marc/src/mRc_repo/shinyTools/scripts/process.R
-logFile;/home/marc/src/mRc_repo/shinyTools/log/log.log
-statusFile;/home/marc/src/mRc_repo/shinyTools/tmp/process-ifof.status
-
-Input is
-10
-
-Progress update to 0.8
-
-Process finishes at 2016-10-02 20:56:02
-
-
-########################################
-Starting at 2016-10-02 20:56:36
-
-ProcessInfo:
-
-progress;0
-pid;2016-10-02_20:56_4727
-sessionid;
-status;
-pwd;/home/marc/src/mRc_repo/shinyTools/tmp
-ifof;/home/marc/src/mRc_repo/shinyTools/tmp/process-ifof.rds
-Rscript;/home/marc/src/mRc_repo/shinyTools/scripts/process.R
-logFile;/home/marc/src/mRc_repo/shinyTools/log/log.log
-statusFile;/home/marc/src/mRc_repo/shinyTools/tmp/process-ifof.status
-
-Input is
-10
-
-Progress update to 0.8
-
-Expression:
-asddpois(1:100, input)
-returned error:
-Error in eval(expr, envir, enclos) : could not find function "asddpois"
-
-Quitting at 2016-10-02 20:56:40
-
-
-########################################
-Starting at 2016-10-02 20:58:49
-
-ProcessInfo:
-
-progress;0
-pid;2016-10-02_20:58_2973
-sessionid;
-status;
-pwd;/home/marc/src/mRc_repo/shinyTools/tmp
-ifof;/home/marc/src/mRc_repo/shinyTools/tmp/process-ifof.rds
-Rscript;/home/marc/src/mRc_repo/shinyTools/scripts/process.R
-logFile;/home/marc/src/mRc_repo/shinyTools/log/log.log
-statusFile;/home/marc/src/mRc_repo/shinyTools/tmp/process-ifof.status
-
-Input is
-10
-
-Progress update to 0.8
-
-Expression:
-asddpois(1:100, input)
-returned error:
-Error in eval(expr, envir, enclos) : could not find function "asddpois"
-
-Quitting at 2016-10-02 20:58:53
-
-
-########################################
-Starting at 2016-10-02 20:59:15
-
-ProcessInfo:
-
-progress;0
-pid;2016-10-02_20:59_6400
-sessionid;
-status;
-pwd;/home/marc/src/mRc_repo/shinyTools/tmp
-ifof;/home/marc/src/mRc_repo/shinyTools/tmp/process-ifof.rds
-Rscript;/home/marc/src/mRc_repo/shinyTools/scripts/process.R
-logFile;/home/marc/src/mRc_repo/shinyTools/log/log.log
-statusFile;/home/marc/src/mRc_repo/shinyTools/tmp/process-ifof.status
-
-Input is
-10
-
-Progress update to 0.8
-
-Process finishes at 2016-10-02 20:59:19
-
-
-########################################
-Starting at 2016-10-02 21:00:34
-
-ProcessInfo:
-
-progress;0
-pid;2016-10-02_21:00_9895
-sessionid;
-status;
-pwd;/home/marc/src/mRc_repo/shinyTools/tmp
-ifof;/home/marc/src/mRc_repo/shinyTools/tmp/process-ifof.rds
-Rscript;/home/marc/src/mRc_repo/shinyTools/scripts/process.R
-logFile;/home/marc/src/mRc_repo/shinyTools/log/log.log
-statusFile;/home/marc/src/mRc_repo/shinyTools/tmp/process-ifof.status
-
-Input is
-100
-
-Progress update to 0.8
-
-Process finishes at 2016-10-02 21:00:38
-
-
-########################################
-Starting at 2016-10-02 21:01:08
-
-ProcessInfo:
-
-progress;0
-pid;2016-10-02_21:01_8582
-sessionid;
-status;
-pwd;/home/marc/src/mRc_repo/shinyTools/tmp
-ifof;/home/marc/src/mRc_repo/shinyTools/tmp/process-ifof.rds
-Rscript;/home/marc/src/mRc_repo/shinyTools/scripts/process.R
-logFile;/home/marc/src/mRc_repo/shinyTools/log/log.log
-statusFile;/home/marc/src/mRc_repo/shinyTools/tmp/process-ifof.status
-
-Input is
-100
-
-Progress update to 0.8
-
-Expression:
-asddpois(1:100, input)
-returned error:
-Error in eval(expr, envir, enclos) : could not find function "asddpois"
-
-Quitting at 2016-10-02 21:01:12
-
-
-########################################
-Starting at 2016-10-02 21:17:22
-
-ProcessInfo:
-
-progress;0
-pid;2016-10-02_21:17_0549
-sessionid;
-status;
-pwd;/home/marc/src/mRc_repo/shinyTools/tmp
-ifof;/home/marc/src/mRc_repo/shinyTools/tmp/process-ifof.rds
-Rscript;/home/marc/src/mRc_repo/shinyTools/scripts/process.R
-logFile;/home/marc/src/mRc_repo/shinyTools/log/log.log
-statusFile;/home/marc/src/mRc_repo/shinyTools/tmp/process-ifof.status
-
-Input is
-10
-
-Progress update to 0.8
-
-Process finishes at 2016-10-02 21:17:26
-
-
-########################################
-Starting at 2016-10-02 21:17:38
-
-ProcessInfo:
-
-progress;0
-pid;2016-10-02_21:17_3178
-sessionid;
-status;
-pwd;/home/marc/src/mRc_repo/shinyTools/tmp
-ifof;/home/marc/src/mRc_repo/shinyTools/tmp/process-ifof.rds
-Rscript;/home/marc/src/mRc_repo/shinyTools/scripts/process.R
-logFile;/home/marc/src/mRc_repo/shinyTools/log/log.log
-statusFile;/home/marc/src/mRc_repo/shinyTools/tmp/process-ifof.status
-
-Input is
-10
-
-Progress update to 0.8
-
-Expression:
-asddpois(1:100, input)
-returned error:
-Error in eval(expr, envir, enclos) : could not find function "asddpois"
-
-Quitting at 2016-10-02 21:17:42
-
-
-########################################
-Starting at 2016-10-02 21:18:01
-
-ProcessInfo:
-
-progress;0
-pid;2016-10-02_21:18_8628
-sessionid;
-status;
-pwd;/home/marc/src/mRc_repo/shinyTools/tmp
-ifof;/home/marc/src/mRc_repo/shinyTools/tmp/process-ifof.rds
-Rscript;/home/marc/src/mRc_repo/shinyTools/scripts/process.R
-logFile;/home/marc/src/mRc_repo/shinyTools/log/log.log
-statusFile;/home/marc/src/mRc_repo/shinyTools/tmp/process-ifof.status
-
-Input is
-10
-
-Progress update to 0.8
-
-Expression:
-asddpois(1:100, input)
-returned error:
-Error in eval(expr, envir, enclos) : could not find function "asddpois"
-
-Quitting at 2016-10-02 21:18:05
-
-
-########################################
-Starting at 2016-10-02 21:18:13
-
-ProcessInfo:
-
-progress;0
-pid;2016-10-02_21:18_7073
-sessionid;
-status;
-pwd;/home/marc/src/mRc_repo/shinyTools/tmp
-ifof;/home/marc/src/mRc_repo/shinyTools/tmp/process-ifof.rds
-Rscript;/home/marc/src/mRc_repo/shinyTools/scripts/process.R
-logFile;/home/marc/src/mRc_repo/shinyTools/log/log.log
-statusFile;/home/marc/src/mRc_repo/shinyTools/tmp/process-ifof.status
-
-Input is
-10
-
-Progress update to 0.8
-
-Process finishes at 2016-10-02 21:18:17
-
-
-########################################
-Starting at 2016-10-02 21:20:54
-
-ProcessInfo:
-
-progress;0
-pid;2016-10-02_21:20_8163
-sessionid;
-status;
-pwd;/home/marc/src/mRc_repo/shinyTools/tmp
-ifof;/home/marc/src/mRc_repo/shinyTools/tmp/process-ifof.rds
-Rscript;/home/marc/src/mRc_repo/shinyTools/scripts/process.R
-logFile;/home/marc/src/mRc_repo/shinyTools/log/log.log
-statusFile;/home/marc/src/mRc_repo/shinyTools/tmp/process-ifof.status
-
-Input is
-10
-
-Progress update to 0.8
-
-
-########################################
-Starting at 2016-10-02 21:20:56
-
-ProcessInfo:
-
-progress;0
-pid;2016-10-02_21:20_9133
-sessionid;
-status;
-pwd;/home/marc/src/mRc_repo/shinyTools/tmp
-ifof;/home/marc/src/mRc_repo/shinyTools/tmp/process-ifof.rds
-Rscript;/home/marc/src/mRc_repo/shinyTools/scripts/process.R
-logFile;/home/marc/src/mRc_repo/shinyTools/log/log.log
-statusFile;/home/marc/src/mRc_repo/shinyTools/tmp/process-ifof.status
-
-Input is
-10
-
-Progress update to 0.8
-
-Process finishes at 2016-10-02 21:21:00
-
-
-########################################
-Starting at 2016-10-02 21:25:39
-
-ProcessInfo:
-
-progress;0
-pid;2016-10-02_21:25_2390
-sessionid;
-status;
-pwd;/home/marc/src/mRc_repo/shinyTools/tmp
-ifof;/home/marc/src/mRc_repo/shinyTools/tmp/process-ifof.rds
-Rscript;/home/marc/src/mRc_repo/shinyTools/scripts/process.R
-logFile;/home/marc/src/mRc_repo/shinyTools/log/log.log
-statusFile;/home/marc/src/mRc_repo/shinyTools/tmp/process-ifof.status
-
-Input is
-1
-
-Progress update to 0.8
-
-Process finishes at 2016-10-02 21:25:43
-
-
-########################################
-Starting at 2016-10-02 21:26:51
-
-ProcessInfo:
-
-progress;0
-pid;2016-10-02_21:26_1330
-sessionid;
-status;
-pwd;/home/marc/src/mRc_repo/shinyTools/tmp
-ifof;/home/marc/src/mRc_repo/shinyTools/tmp/process-ifof.rds
-Rscript;/home/marc/src/mRc_repo/shinyTools/scripts/process.R
-logFile;/home/marc/src/mRc_repo/shinyTools/log/log.log
-statusFile;/home/marc/src/mRc_repo/shinyTools/tmp/process-ifof.status
-
-Input is
-10
-
-Progress update to 0.8
-
-Process finishes at 2016-10-02 21:26:55
+asd : 
+asd : Input is
+asd : 11
+asd : 
+asd : Progress update to 0.8
+asd : 
+asd : Process finishes at 2016-10-04 21:42:15
+asd : 
+asd : 
+asd : ########################################
+asd : Starting at 2016-10-04 21:43:18
+asd : 
+asd : ProcessInfo:
+asd : 
+asd : progress;0
+asd : pid;2016-10-04_21:43_5526
+asd : sessionid;asd
+asd : status;
+asd : pwd;/home/marc/src/mRc_repo/shinyTools/tmp
+asd : ifof;/home/marc/src/mRc_repo/shinyTools/tmp/process-ifof.rds
+asd : Rscript;/home/marc/src/mRc_repo/shinyTools/scripts/process.R
+asd : logFile;/home/marc/src/mRc_repo/shinyTools/log/log.log
+asd : statusFile;/home/marc/src/mRc_repo/shinyTools/tmp/process-ifof.status
+asd : 
+asd : Input is
+asd : 10
+asd : 
+asd : Progress update to 0.8
+asd : 
+asd : Process finishes at 2016-10-04 21:43:24
+asd : 
+asd : 
+asd : ########################################
+asd : Starting at 2016-10-04 21:43:51
+asd : 
+asd : ProcessInfo:
+asd : 
+asd : progress;0
+asd : pid;2016-10-04_21:43_2752
+asd : sessionid;asd
+asd : status;
+asd : pwd;/home/marc/src/mRc_repo/shinyTools/tmp
+asd : ifof;/home/marc/src/mRc_repo/shinyTools/tmp/process-ifof.rds
+asd : Rscript;/home/marc/src/mRc_repo/shinyTools/scripts/process.R
+asd : logFile;/home/marc/src/mRc_repo/shinyTools/log/log.log
+asd : statusFile;/home/marc/src/mRc_repo/shinyTools/tmp/process-ifof.status
+asd : 
+asd : Input is
+asd : 110
+asd : 
+asd : Process aborts:
+asd : Input greater 100
+asd : 
+asd : 
+asd : ########################################
+asd : Starting at 2016-10-04 21:49:09
+asd : 
+asd : ProcessInfo:
+asd : 
+asd : progress;0
+asd : pid;2016-10-04_21:49_1641
+asd : sessionid;asd
+asd : status;
+asd : pwd;/home/marc/src/mRc_repo/shinyTools/tmp
+asd : ifof;/home/marc/src/mRc_repo/shinyTools/tmp/process-ifof.rds
+asd : Rscript;/home/marc/src/mRc_repo/shinyTools/scripts/process.R
+asd : logFile;/home/marc/src/mRc_repo/shinyTools/log/log.log
+asd : statusFile;/home/marc/src/mRc_repo/shinyTools/tmp/process-ifof.status
+asd : 
+asd : Input is
+asd : 101
+asd : 
+asd : Process aborts:
+asd : Input greater 100
+asd : 
+asd : 
+asd : ########################################
+asd : Starting at 2016-10-04 21:49:20
+asd : 
+asd : ProcessInfo:
+asd : 
+asd : progress;0
+asd : pid;2016-10-04_21:49_0366
+asd : sessionid;asd
+asd : status;
+asd : pwd;/home/marc/src/mRc_repo/shinyTools/tmp
+asd : ifof;/home/marc/src/mRc_repo/shinyTools/tmp/process-ifof.rds
+asd : Rscript;/home/marc/src/mRc_repo/shinyTools/scripts/process.R
+asd : logFile;/home/marc/src/mRc_repo/shinyTools/log/log.log
+asd : statusFile;/home/marc/src/mRc_repo/shinyTools/tmp/process-ifof.status
+asd : 
+asd : Input is
+asd : 100
+asd : 
+asd : Progress update to 0.8
+asd : 
+asd : Process finishes at 2016-10-04 21:49:26
+asd : 
+asd : 
+asd : ########################################
+asd : Starting at 2016-10-04 21:50:34
+asd : 
+asd : ProcessInfo:
+asd : 
+asd : progress;0
+asd : pid;2016-10-04_21:50_6730
+asd : sessionid;asd
+asd : status;
+asd : pwd;/home/marc/src/mRc_repo/shinyTools/tmp
+asd : ifof;/home/marc/src/mRc_repo/shinyTools/tmp/process-ifof.rds
+asd : Rscript;/home/marc/src/mRc_repo/shinyTools/scripts/process.R
+asd : logFile;/home/marc/src/mRc_repo/shinyTools/log/log.log
+asd : statusFile;/home/marc/src/mRc_repo/shinyTools/tmp/process-ifof.status
+asd : 
+asd : random log 1
+asd : 
+asd : Input is
+asd : 100
+asd : 
+asd : random log 2
+asd : 
+asd : Progress update to 0.8
+asd : 
+asd : Progress update to 0.9
+asd : 
+asd : Process finishes at 2016-10-04 21:50:40
+asd : 
+asd : 
+asd : ########################################
+asd : Starting at 2016-10-04 21:52:52
+asd : 
+asd : ProcessInfo:
+asd : 
+asd : progress;0
+asd : pid;2016-10-04_21:52_4918
+asd : sessionid;asd
+asd : status;
+asd : pwd;/home/marc/src/mRc_repo/shinyTools/tmp
+asd : ifof;/home/marc/src/mRc_repo/shinyTools/tmp/process-ifof.rds
+asd : Rscript;/home/marc/src/mRc_repo/shinyTools/scripts/process.R
+asd : logFile;/home/marc/src/mRc_repo/shinyTools/log/log.log
+asd : statusFile;/home/marc/src/mRc_repo/shinyTools/tmp/process-ifof.status
+asd : 
+asd : Input is
+asd : 90
+asd : 
+asd : Progress update to 0.8
+asd : 
+asd : Process finishes at 2016-10-04 21:52:58
+asd : 
+asd : 
+asd : ########################################
+asd : Starting at 2016-10-04 21:53:26
+asd : 
+asd : ProcessInfo:
+asd : 
+asd : progress;0
+asd : pid;2016-10-04_21:53_3216
+asd : sessionid;asd
+asd : status;
+asd : pwd;/home/marc/src/mRc_repo/shinyTools/tmp
+asd : ifof;/home/marc/src/mRc_repo/shinyTools/tmp/process-ifof.rds
+asd : Rscript;/home/marc/src/mRc_repo/shinyTools/scripts/process.R
+asd : logFile;/home/marc/src/mRc_repo/shinyTools/log/log.log
+asd : statusFile;/home/marc/src/mRc_repo/shinyTools/tmp/process-ifof.status
+asd : 
+asd : Input is
+asd : 110
+asd : 
+asd : Process aborts:
+asd : Input greater 100

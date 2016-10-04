@@ -1,7 +1,5 @@
 library(shinyTools)
 
-source("R/RProcessFinish.R")
-
 # some function as example
 check <- function(object, add){ if(object <= add$n) return(paste("Lambda must be greater", add$n, "idiot!"))}
 
@@ -20,7 +18,7 @@ ui <- fluidPage(sidebarLayout(
 server <-function(input, output, session) {
 
   callModule(RProcessStart, "process", trigger = reactive(input$trigger), object = reactive(input$num1),
-             script = "./scripts/process.R", logFile = "./log/log.log", pwd = "./tmp",
+             script = "./scripts/process.R", logFile = "./log/log.log", pwd = "./tmp", sessionid = "asd",
              checkFun = "check", addArgs = list(n = 0))
 
   result <- callModule(RProcessFinish, "process", pwd = "./tmp")

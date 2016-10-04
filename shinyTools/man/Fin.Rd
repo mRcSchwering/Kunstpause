@@ -43,8 +43,11 @@ This ensures that, in case a newer version of the same process is running, the c
 
 }
 \seealso{
-Other RProcess module functions: \code{\link{Init}},
-  \code{\link{Log}}, \code{\link{RProcessStartUI}},
+Other RProcess module functions: \code{\link{Abort}},
+  \code{\link{Init}}, \code{\link{Log}},
+  \code{\link{RProcessFinishUI}},
+  \code{\link{RProcessFinish}},
+  \code{\link{RProcessStartUI}},
   \code{\link{RProcessStart}}, \code{\link{ReadInfo}},
   \code{\link{Try}}, \code{\link{Up}}
 }
