@@ -82,9 +82,14 @@ RProcessStart <- function(input, output, session, trigger, object, script,
   # some constants
   command <- "Rscript"
   id <- session$ns("ifof")
-  logFile <- normalizePath(logFile)
   script <- normalizePath(script)
   pwd <- normalizePath(pwd)
+
+  # write logFile if necessary
+  if(!is.null(logFile)){
+    if(!file.exists(logFile)) file.create(logFile)
+    logFile <- normalizePath(logFile)
+  }
 
   # errors
   error <- reactiveValues(text = NULL)

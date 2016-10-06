@@ -4,7 +4,7 @@
 \alias{Abort}
 \title{Abort}
 \usage{
-Abort(status, log = paste("Process aborts:", status), info = NULL)
+Abort(status, log = c("Process aborts:", status), info = NULL)
 }
 \arguments{
 \item{log}{chr arr used as initial log entry for this process. Each element is a line.}
@@ -49,6 +49,6 @@ Other RProcess module functions: \code{\link{Fin}},
   \code{\link{RProcessFinish}},
   \code{\link{RProcessStartUI}},
   \code{\link{RProcessStart}}, \code{\link{ReadInfo}},
-  \code{\link{Try}}, \code{\link{Up}}
+  \code{\link{Start}}, \code{\link{Try}}, \code{\link{Up}}
 }
 

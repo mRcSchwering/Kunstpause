@@ -36,7 +36,7 @@ Other RProcess module functions: \code{\link{Abort}},
   \code{\link{RProcessFinishUI}},
   \code{\link{RProcessFinish}},
   \code{\link{RProcessStartUI}},
-  \code{\link{RProcessStart}}, \code{\link{Try}},
-  \code{\link{Up}}
+  \code{\link{RProcessStart}}, \code{\link{Start}},
+  \code{\link{Try}}, \code{\link{Up}}
 }
 

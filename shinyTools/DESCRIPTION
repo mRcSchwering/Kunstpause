@@ -6,7 +6,8 @@ Date: 22.09.2016
 Author: Marc Schwering
 Maintainer: Marc Schwering <schweringmarc01@gmail.com>
 Depends: R (>= 2.15.0), shiny
-Suggests: 
+VignetteBuilder: knitr
+Suggests: knitr, rmarkdown
 Description: A collecction of R shiny modules that I collected over the time while writing some applications.
 License: What license is it under?
 LazyData: TRUE

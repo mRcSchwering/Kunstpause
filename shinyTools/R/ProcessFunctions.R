@@ -410,3 +410,79 @@ Abort <- function( status, log = c("Process aborts:", status), info = NULL )
 
   quit("no", 0)
 }
+
+
+
+
+
+
+#' Start
+#'
+#' This is a convenience function for a R batch script started by a shiny session with the RProcess module.
+#' It should be the last command of a script since it writes an output file and send a termination singal.
+#'
+#' The output will overwrite the input file used by the same R script.
+#' By setting the progress to 1, the shiny session knows that this R script has finished.
+#' It will then read the output file. The script quits itself.
+#'
+#' The communication happens via a *.status file.
+#' Information provided by RProcess module is handed over to the R batch process via this file.
+#' Conversely the R batch process writes on this file to hand over status updates to the shiny session.
+#' By using the functions \code{\link{Init}}, \code{\link{Up}}, \code{\link{Log}}, \code{\link{Try}},
+#' \code{\link{Fin}} it is ensured that the communication bewteen shiny session and R batch script work and
+#' that no files are falsly overwritten.
+#'
+#' If a log file exists, it is appended by the lines defined with log. Each element of log is a line.
+#' Information about path of the log file, the session id and the process id is taken from the ProcessInfo object.
+#' If a session id exists, every line is prefixed with it.
+#' If a process id exists, before writing anything the loaded process id is compared with the current one -- read from the *.status file.
+#' If they do not match, quit() is run.
+#' This ensures that, in case a newer version of the same process is running, the current one will quit and not overwrite anything.
+#'
+#' @family RProcess module functions
+#'
+#' @param id        chr of process id. This id will be used by RProcessFinish to watch results of this process
+#' @param script    chr full path of R batch script which is to be started
+#' @param log       chr arr used as log entry in case logFile is not NULL. Each element is a line.
+#' @param logFile   chr or NULL (NULL) full path of logFile is needed. This log file will be used by the process started
+#' @param info      ProcessInfo object or NULL (NULL).
+#'                  This is a list of relevant information about the process.
+#'                  It can be created with \code{\link{RProcessInit}}.
+#'                  If NULL the global environment is searched for an object of class ProcessInfo.
+#'
+#' @return TRUE
+#'
+#' @examples
+#'
+#' @export
+#'
+Start <- function( id, script,
+                   log = c(paste0("Start process with id ", id, ":"), script),
+                   logFile = NULL, info = NULL )
+{
+  # look for ProcessInfo object
+  if(is.null(info)) info <- get(
+    Filter(function(x) class(get(x, envir = globalenv()))[1] == "ProcessInfo", ls(envir = globalenv()))[1],
+    envir = globalenv())
+  if(length(info) < 1) stop("Argument info empty or no ProcessInfo object found.")
+
+  # make new info object
+  info2 <- info
+  info2$progress <- 0
+  info2$ifof <- file.path(info2$pwd, paste0(id, "-ifof.rds"))
+  info2$Rscript <- script #"/home/marc/src/mRc_repo/shinyTools/scripts/process2.R" # muss absolut path oder von pwd aus
+  info2$logFile <- logFile #"/home/marc/src/mRc_repo/shinyTools/log/log2.log" # muss absolut path oder von pwd aus
+  info2$statusFile <- file.path(info2$pwd, paste0(id, "-ifof.status"))
+
+  # write log if pid valid
+  Log(log, info = info)
+
+  # write status and input
+  saveRDS(input, info2$ifof)
+  write(sapply(1:length(info2), function(x) paste0(names(info2)[x], ";", paste(info2[[x]], collapse = ";"))), info2$statusFile)
+
+  # start process
+  system2("Rscript", args = c(info2$Rscript, info2$statusFile), wait = FALSE, stdout = NULL, stderr = NULL)
+
+  TRUE
+}
